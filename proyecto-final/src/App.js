@@ -1,22 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from "./components/NavBar";
+import Offers from './components/Offers';
+import ItemListContainer from './components/ItemListContainer';
+
+const styles = {
+  title: {
+    color: "green",
+  }
+}
+const saludo = {
+  greeting: "Bienvenido/a a la tienda de Recreativo",
+  estilo:{
+    color:"red",
+  }
+}
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className="container"> 
+        <div > <NavBar /> </div>
+        <ItemListContainer
+        greeting = {saludo.greeting} 
+        estilo = {saludo.estilo}/>
+
+        <div style={styles.title}> < Offers /> </div>
       </header>
     </div>
   );
