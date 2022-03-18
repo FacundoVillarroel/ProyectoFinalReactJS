@@ -1,0 +1,30 @@
+.body {
+    font-size: 62.5%; 
+    background-color: #212121;
+    color: white;
+}
+
+.header{
+    color: white;
+    background-image: linear-gradient(to top, #212121, #fa4659);
+}
+.logo{
+    max-width: 10rem;
+}
+.titulo{
+    font-size: 5rem;
+}
+a{
+    text-decoration: none;
+    color: #212121;
+    font-size: 2rem;
+}
+.navBar{
+    background-color: #2eb872;
+}
+.activePage{
+    color: white;
+}
+.cartLogo{
+    max-width: 2rem;
+}
