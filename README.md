@@ -1,3 +1,10 @@
+FINAL PROJECT FOR THE REACT JS COURSE OF CODERHOUSE
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
