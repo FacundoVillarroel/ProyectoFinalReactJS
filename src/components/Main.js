@@ -13,11 +13,13 @@ const saludo = {
     }
 }
 
+
 function Main () {
     return (
-        <main className="main container">
+        <main className="main container pb-3">
             <ItemListContainer greeting = {saludo.greeting} estilo = {saludo.estilo}/>
             <div style={styles.title}> < Offers /> </div>
+
         </main>
     )
 }
