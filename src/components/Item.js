@@ -1,8 +1,4 @@
 
-import products from "./items.js"
-
-let conjuntoTitular = products.conTitular;
-
 function Item (item){
     return(
         <div className= "product d-flex flex-column align-items-center">
