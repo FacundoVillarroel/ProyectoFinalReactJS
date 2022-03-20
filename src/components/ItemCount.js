@@ -2,11 +2,10 @@ import React, {useState} from "react";
 
 function ItemCount ({stock,initial}){
     let [count,setCount] = useState(initial);
-    let [newStock,setNewStock] = useState(stock);
 
     //Agregando al contador
     function clickPlus(){
-        if (count < newStock){
+        if (count < stock){
             setCount (count +1)
         }
     }
@@ -20,8 +19,7 @@ function ItemCount ({stock,initial}){
 
     //Agregando al carrito solo en caso de no superar el stock
     function addToCart (){
-        if (count <= newStock){
-            setNewStock (newStock - count)
+        if (count <= stock){
         alert("agregado al carrito",count);
         setCount(initial)
         }
@@ -39,7 +37,7 @@ function ItemCount ({stock,initial}){
                 <button className ="quantityButton me-2" onClick={clickPlus}> + </button>
             </div>
             <button className="AddToCartButton" onClick={addToCart}> Agregar al carrito </button>
-            <p>Stock disponible: {newStock}</p>
+            <p>Stock disponible: {stock}</p>
         </div>
     )
 }
