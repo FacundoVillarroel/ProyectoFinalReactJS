@@ -1,6 +1,6 @@
 
 function Item (item){
-    return(
+    return item?(
         <div className= "product d-flex flex-column align-items-center">
             <div className ="productName pt-1 pb-1">
                 <p>{item.item.title}</p>
@@ -16,6 +16,6 @@ function Item (item){
                 <p className="mb-0">Stock disponible: {item.item.stock}</p>
             </div>
         </div>
-    )
+    ): null
 }
 export default Item;

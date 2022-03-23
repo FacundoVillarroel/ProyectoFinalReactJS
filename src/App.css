@@ -50,27 +50,30 @@ a {
   width: 15rem;
   border: #2eb872 solid 0.1rem; }
 
-.product {
-  width: 20rem;
-  border: #2eb872 solid 0.1rem; }
-  .product .productName {
-    width: 100%;
-    height: 2.7rem;
-    color: white;
-    background-color: #2eb872;
-    border-bottom: #2eb872 solid 0.1rem;
-    font-size: 1.5rem;
-    text-align: center; }
-  .product .productImage {
-    max-width: 18rem;
-    height: 10rem; }
-  .product .productPrice {
-    font-size: 1rem; }
-  .product .viewDetails {
-    font-size: 1rem;
-    width: 8rem; }
-  .product .stock {
-    width: 100%;
-    border-top: 0.1rem #2eb872 solid;
-    background-color: #2eb872;
-    text-align: center; }
+.productList {
+  justify-content: center; }
+  .productList .product {
+    width: 20rem;
+    border: #2eb872 solid 0.1rem;
+    margin: 0.5rem; }
+    .productList .product .productName {
+      width: 100%;
+      height: 2.7rem;
+      color: white;
+      background-color: #2eb872;
+      border-bottom: #2eb872 solid 0.1rem;
+      font-size: 1.5rem;
+      text-align: center; }
+    .productList .product .productImage {
+      max-width: 18rem;
+      height: 10rem; }
+    .productList .product .productPrice {
+      font-size: 1rem; }
+    .productList .product .viewDetails {
+      font-size: 1rem;
+      width: 8rem; }
+    .productList .product .stock {
+      width: 100%;
+      border-top: 0.1rem #2eb872 solid;
+      background-color: #2eb872;
+      text-align: center; }
