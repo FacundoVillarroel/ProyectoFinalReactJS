@@ -34,7 +34,7 @@
     }
     
     .itemCount{
-        background-color: gray;
+        background-color: #2eb872;
         width: 16rem;
         .quantityButtonContainer{
             width: 15rem;
@@ -67,10 +67,6 @@
                 font-size: 1.5rem;
                 text-align: center;
             }
-            .productImage{
-            max-width: 18rem;
-            height: 10rem;
-            }
             .productPrice{
                 font-size: 1rem;
             }
@@ -88,4 +84,11 @@
     }
 }
 
+.productImage{
+    max-width: 18rem;
+    height: 10rem;
+    }
 
+.itemDetailContainer{
+    margin: 1rem;
+}

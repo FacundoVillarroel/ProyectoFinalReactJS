@@ -30,7 +30,7 @@ function ItemCount ({stock,initial}){
 
     return (
         <div className ="itemCount d-flex flex-column align-items-center">
-            <h4>Nombre del producto</h4>
+            <h4>Cantidad</h4>
             <div className ="quantityButtonContainer d-flex justify-content-between">
                 <button className ="quantityButton ms-2" onClick={clickMinus}> - </button>
                 <p className ="mt-2"> {count} </p>

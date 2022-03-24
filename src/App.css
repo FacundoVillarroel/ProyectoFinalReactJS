@@ -25,7 +25,7 @@
     .body .navBar .cartLogo {
       max-width: 2rem; }
   .body .itemCount {
-    background-color: gray;
+    background-color: #2eb872;
     width: 16rem; }
     .body .itemCount .quantityButtonContainer {
       width: 15rem;
@@ -52,9 +52,6 @@
         border-bottom: #2eb872 solid 0.1rem;
         font-size: 1.5rem;
         text-align: center; }
-      .body .productList .product .productImage {
-        max-width: 18rem;
-        height: 10rem; }
       .body .productList .product .productPrice {
         font-size: 1rem; }
       .body .productList .product .viewDetails {
@@ -65,3 +62,10 @@
         border-top: 0.1rem #2eb872 solid;
         background-color: #2eb872;
         text-align: center; }
+
+.productImage {
+  max-width: 18rem;
+  height: 10rem; }
+
+.itemDetailContainer {
+  margin: 1rem; }
