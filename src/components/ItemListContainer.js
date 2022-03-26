@@ -1,7 +1,7 @@
 import ItemList from "./ItemList.js"
-import productsListImported from "../data/items.js"
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom"
+import { getProducts } from "../helper/getProducts.js";
 
 function ItemListContainer(){
     const [productsList,setProductList] = useState([])
@@ -11,23 +11,19 @@ function ItemListContainer(){
     useEffect(()=> {
         setLoading(true)
 
-        let promise = new Promise (resolve => {
-            setTimeout(()=> {
-                resolve (productsListImported);
-            }, 2000)   
-        })
-        promise.then ((response) =>{
-            if (categoryId) {
-                setProductList( response.filter( (prod) => prod.category === categoryId ) )
-            } else {
-                setProductList( response )
-            }
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-        .finally(() => {
-            setLoading(false)
+        getProducts()
+            .then ((response) =>{
+                if (categoryId) {
+                    setProductList( response.filter( (prod) => prod.category === categoryId ) )
+                } else {
+                    setProductList( response )
+                }
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+            .finally(() => {
+                setLoading(false)
         })
     },[categoryId])
 
