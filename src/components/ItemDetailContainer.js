@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ItemDetail from "./ItemDetail"
 import items from "../data/items"
 
-let itemImported = items.products[0]
+let itemImported = items[0]
 
 
 function ItemDetailContainer(){

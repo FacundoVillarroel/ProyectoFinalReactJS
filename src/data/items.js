@@ -14,28 +14,29 @@ import imgCongVarNeg from "../images/conjuntoVarianteNegro2.jpeg"
 
 
 class product {
-    constructor (title, price,imgSrc,stock,description){
-        this.id = Math.random();
+    constructor (id,title, price,imgSrc,stock,description,category){
+        this.id = id;
         this.title = title ;
         this.price = price;
         this.imgSrc = imgSrc;
         this.stock = stock;
-        this.description = description
+        this.description = description;
+        this.category = category
     }
 }
 
-const conTitular = new product ("Conjunto titular",2000,imgConTitular,10, "Conjunto titular de Recreativo fútbol club");
-const conSuplente = new product("Conjunto suplente",1800,imgConSuplente, 7, "Conjunto titular de Recreativo fútbol club");
-const conArquero = new product ("Conjunto arquero", 1600, imgConArquero,10, "Conjunto de arquero de Recreativo fútbol club");
-const conArqueroAlternativo = new product("Conjunto arquero alternativo", 1500, imgConArqAlt,5,"Conjunto arquero alternativo de Recreativo fútbol club");
-const conEspecial = new product("Conjunto Especial", 1500, imgConAlt,10,"Conjunto especial de Recreativo fútbol club");
-const conVeranoNegro = new product("Conjunto de verano negro", 1600, imgConVerNeg,9,"Conjunto de verano negro de Recreativo fútbol club");
-const conVeranoBlanco = new product ("Conjunto de verano blanco", 1400, imgConVerBla,9,"Conjunto de verano blanco de Recreativo fútbol club");
-const conInvierno = new product("Conjunto de invierno", 2000, imgConInvierno,6,"Conjunto de invierno de Recreativo fútbol club");
-const buzo = new product ("Buzo", 700, imgBuzo,3, "Buzo individual de Recreativo fútbol club");
-const conAlternativoBlanco = new product ("Conjunto alternativo blanco", 1400, imgConAltBla,8,"Conjunto alternativo blanco de Recreativo fútbol club");
-const conAlternativoNegro = new product ("Conjunto alternativo negro", 1400, imgConAltNeg,10, "Conjunto alternativo negro de Recreativo fútbol club");
-const conVarianteNegro = new product ("Conjunto variante negro", 1400, imgCongVarNeg,5,"Conjunto variante negro de Recreativo fútbol club");
+const conTitular = new product ("conTitular","Conjunto titular",2000,imgConTitular,10, "Conjunto titular de Recreativo fútbol club","titular");
+const conSuplente = new product("conSuplente","Conjunto suplente",1800,imgConSuplente, 7, "Conjunto titular de Recreativo fútbol club","suplente");
+const conArquero = new product ("conArquero","Conjunto arquero", 1600, imgConArquero,10, "Conjunto de arquero de Recreativo fútbol club","titular");
+const conArqueroAlternativo = new product("conArqueroAlternativo","Conjunto arquero alternativo", 1500, imgConArqAlt,5,"Conjunto arquero alternativo de Recreativo fútbol club","suplente");
+const conEspecial = new product("conEspecial","Conjunto Especial", 1500, imgConAlt,10,"Conjunto especial de Recreativo fútbol club","suplente");
+const conVeranoNegro = new product("conVeranoNegro","Conjunto de verano negro", 1600, imgConVerNeg,9,"Conjunto de verano negro de Recreativo fútbol club","deVestir");
+const conVeranoBlanco = new product ("conVeranoBlanco","Conjunto de verano blanco", 1400, imgConVerBla,9,"Conjunto de verano blanco de Recreativo fútbol club","deVestir");
+const conInvierno = new product("conInvierno","Conjunto de invierno", 2000, imgConInvierno,6,"Conjunto de invierno de Recreativo fútbol club","deVestir");
+const buzo = new product ("buzo","Buzo", 700, imgBuzo,3, "Buzo individual de Recreativo fútbol club","deVestir");
+const conAlternativoBlanco = new product ("conAlternativoBlanco","Conjunto alternativo blanco", 1400, imgConAltBla,8,"Conjunto alternativo blanco de Recreativo fútbol club","suplente");
+const conAlternativoNegro = new product ("conAlternativoNegro","Conjunto alternativo negro", 1400, imgConAltNeg,10, "Conjunto alternativo negro de Recreativo fútbol club","suplente");
+const conVarianteNegro = new product ("conVarianteNegro","Conjunto variante negro", 1400, imgCongVarNeg,5,"Conjunto variante negro de Recreativo fútbol club","suplente");
 
 const products =[conTitular,conSuplente,conArquero,conArqueroAlternativo,conEspecial,conVeranoNegro,conVeranoBlanco,conInvierno,buzo,conAlternativoBlanco,conAlternativoNegro,conVarianteNegro]
-export default {products}
+export default products
