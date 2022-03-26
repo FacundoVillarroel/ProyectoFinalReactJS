@@ -1,8 +1,16 @@
 import ItemCount from "./ItemCount"
+import { useNavigate } from "react-router-dom"
+
 
 
 
 function ItemDetail ({item}){
+    const navigate = useNavigate()
+
+    const handleNavigate = () => {
+        navigate(-1)
+    }
+
     return(
         <>  
             <h2>Detalles del producto</h2>
@@ -20,6 +28,8 @@ function ItemDetail ({item}){
                 <div>
                     <ItemCount stock = {item.stock} initial = {1}/>
                 </div>
+                
+                <button className="buttonReturn" onClick={handleNavigate}>Volver</button>
             </div>
         </>
     )

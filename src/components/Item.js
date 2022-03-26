@@ -12,7 +12,7 @@ function Item ({item}){
             <div className="productPrice mt-2">
                 <p className="mb-0">Precio: ${item.price}</p>
             </div>
-            <Link to={`/detail:${item.id}`}><button className="viewDetails mt-1 mb-1 ">Ver detalles</button></Link>
+            <Link to={`/detail/${item.id}`}><button className="viewDetails mt-1 mb-1 ">Ver detalles</button></Link>
             <div className="stock mb-0">
                 <p className="mb-0">Stock disponible: {item.stock}</p>
             </div>

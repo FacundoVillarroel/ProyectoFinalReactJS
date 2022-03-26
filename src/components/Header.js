@@ -1,9 +1,10 @@
 import logo from "../images/logo.png"
+import { Link } from "react-router-dom";
 
 function Header () {
     return (
         <header className="header d-flex justify-content-center align-items-center pt-3 pb-3">
-            <img src={logo} className="logo"/>
+            <Link to={"/"}><img src={logo} className="logo"/></Link>
             <h1 className="titulo ms-4">
             Recreativo F.C.
             </h1>

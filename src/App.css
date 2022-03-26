@@ -69,3 +69,18 @@
 
 .itemDetailContainer {
   margin: 1rem; }
+
+.buttonReturn {
+  margin: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-color: white;
+  background-color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem; }
+  .buttonReturn:hover {
+    color: white;
+    border-color: white;
+    background-color: black;
+    transition: 300ms linear; }
