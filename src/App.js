@@ -4,7 +4,9 @@ import Header from './components/Header';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter,Routes, Route, Navigate} from "react-router-dom"
+import Footer from './components/Footer';
 import './App.css';
+
 
 
 
@@ -22,7 +24,8 @@ function App() {
           
           <Route path="*" element={ <Navigate to="/"/>}/>
         </Routes>
-        
+
+        <Footer/>
       </div>
     </BrowserRouter>
     

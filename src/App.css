@@ -82,5 +82,37 @@
   .buttonReturn:hover {
     color: white;
     border-color: white;
-    background-color: black;
+    background-color: #212121;
     transition: 300ms linear; }
+
+.footerContainer {
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #fa4659, #212121); }
+  .footerContainer .imgFooterCampa {
+    min-width: 7rem;
+    min-height: 6.5rem;
+    background-image: url(./images/campa.png); }
+    .footerContainer .imgFooterCampa:hover {
+      background-image: url(./images/campaNegro.png); }
+  .footerContainer .imgFooterKappa {
+    margin-top: 1rem;
+    width: 6.5rem;
+    height: 3.5rem;
+    background-image: url(./images/kappa.png); }
+    .footerContainer .imgFooterKappa:hover {
+      background-image: url(./images/kappaNegro.png); }
+  .footerContainer .iconos {
+    font-size: 3rem;
+    color: white;
+    padding-right: 1rem; }
+    .footerContainer .iconos:hover {
+      color: #212121; }
+  .footerContainer .patrocinadorFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
