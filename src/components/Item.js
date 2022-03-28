@@ -6,7 +6,7 @@ function Item ({item}){
             <div className ="productName pt-1 pb-1">
                 <p>{item.title}</p>
             </div>
-            <div className="productImageContainer d-flex justify-content-center align-items-center mt-3 mb-2">
+            <div className="productImageContainer d-flex justify-content-center align-items-center mt-4 mb-2">
                 <img src={item.imgSrc} alt="conjunto titular" className="productImage" />
             </div>
             <div className="productPrice mt-2">

@@ -13,11 +13,11 @@ function ItemDetail ({item}){
 
     return(
         <>  
-            <div className="container d-flex flex-column align-items-center">
-                <h3 className="mb-4">
+            <div className="itemDetail container d-flex flex-column align-items-center">
+                <h3 className="m-3">
                     {item.title}
                 </h3>
-                <img src={item.imgSrc} alt={item.title} className="productImage"/>
+                <img src={item.imgSrc} alt={item.title} className="productImage mt-4 mb-2"/>
                 <p className="fs-6 m-3">
                     {item.description}
                 </p >
