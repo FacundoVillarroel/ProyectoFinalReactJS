@@ -13,16 +13,15 @@ function ItemDetail ({item}){
 
     return(
         <>  
-            <h2>Detalles del producto</h2>
             <div className="container d-flex flex-column align-items-center">
-                <h3>
+                <h3 className="mb-4">
                     {item.title}
                 </h3>
                 <img src={item.imgSrc} alt={item.title} className="productImage"/>
-                <p className="fs-6">
+                <p className="fs-6 m-3">
                     {item.description}
                 </p >
-                <h4>
+                <h4 className="mb-4">
                     ${item.price}
                 </h4>
                 <div>

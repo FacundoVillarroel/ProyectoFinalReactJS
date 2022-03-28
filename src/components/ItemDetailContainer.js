@@ -29,6 +29,7 @@ function ItemDetailContainer(){
                 loading 
                     ?   <h2>Loading...</h2> 
                     :   <div className='itemDetailContainer text-center pb-4'>
+                            <h2 className='m-5'>Detalles del producto</h2>
                             <ItemDetail item = {item}/>
                         </div>
             }

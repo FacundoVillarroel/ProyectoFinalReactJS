@@ -11,7 +11,10 @@ import imgBuzo from "../images/buzo.jpeg"
 import imgConAltBla from "../images/conjuntoVarianteBlanco.jpeg"
 import imgConAltNeg from "../images/conjuntoVarianteNegro.jpeg"
 import imgCongVarNeg from "../images/conjuntoVarianteNegro2.jpeg"
-
+import imgBall1 from "../images/ball1.png"
+import imgBall2 from "../images/ball2.png"
+import imgBall3 from "../images/ball3.png"
+import imgBall4 from "../images/ball4.png"
 
 class product {
     constructor (id,title, price,imgSrc,stock,description,category){
@@ -37,6 +40,11 @@ const buzo = new product ("buzo","Buzo", 700, imgBuzo,3, "Buzo individual de Rec
 const conAlternativoBlanco = new product ("conAlternativoBlanco","Conjunto alternativo blanco", 1400, imgConAltBla,8,"Conjunto alternativo blanco de Recreativo fútbol club","suplente");
 const conAlternativoNegro = new product ("conAlternativoNegro","Conjunto alternativo negro", 1400, imgConAltNeg,10, "Conjunto alternativo negro de Recreativo fútbol club","suplente");
 const conVarianteNegro = new product ("conVarianteNegro","Conjunto variante negro", 1400, imgCongVarNeg,5,"Conjunto variante negro de Recreativo fútbol club","suplente");
+const ball1 = new product ("Pelota1", "Pelota Kappa Recreativo", 800, imgBall1, 20, "Pelota de fútbol kappa original con los colores de Recreativo fútbol club","pelota")
+const ball2 = new product ("Pelota2", "Pelota Kappa Tournament", 700, imgBall2, 15, "Pelota de fútbol kappa original","pelota")
+const ball3 = new product ("Pelota3", "Pelota Kappa Roja", 600, imgBall3, 15, "Pelota de fútbol kappa original","pelota")
+const ball4 = new product ("Pelota4", "Pelota Kappa Negra", 600, imgBall4, 15, "Pelota de fútbol kappa original","pelota")
 
-const products =[conTitular,conSuplente,conArquero,conArqueroAlternativo,conEspecial,conVeranoNegro,conVeranoBlanco,conInvierno,buzo,conAlternativoBlanco,conAlternativoNegro,conVarianteNegro]
+
+const products =[conTitular,conSuplente,conArquero,conArqueroAlternativo,conEspecial,conVeranoNegro,conVeranoBlanco,conInvierno,buzo,conAlternativoBlanco,conAlternativoNegro,conVarianteNegro,ball1,ball2,ball3,ball4]
 export default products

@@ -22,6 +22,9 @@ function NavBar() {
                     <Link to="/category/deVestir">
                         <Nav.Link href="#category/deVestir">Ropa de vestir</Nav.Link>
                     </Link>
+                    <Link to="/category/pelota">
+                        <Nav.Link href="#category/pelota">Pelotas</Nav.Link>
+                    </Link>
                         <CartWidget/>
                     </Nav>
                 </Navbar.Collapse>
