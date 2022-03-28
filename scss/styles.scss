@@ -11,25 +11,31 @@
         color: white;
         background-image: linear-gradient(to top, #212121, #fa4659);
         .logo{
-            max-width: 10rem;
+            max-width: 7.5rem;
         }
         .titulo{
-            font-size: 5rem;
+            font-size: 4.5rem;
         }
     }
     
     a{
         text-decoration: none;
         color: #212121;
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .navBar{
+        .me-auto{
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
         background-color: #2eb872;
         .activePage{
             color: white;
         }
         .cartLogo{
-            max-width: 2rem;
+            min-width: 2rem;
+            max-height: 2.5rem;
         }
     }
     
@@ -71,8 +77,20 @@
                 font-size: 1rem;
             }
             .viewDetails{
+                margin: 1rem;
+                padding: 0.4rem 0.8rem;
+                font-weight: 700;
                 font-size: 1rem;
                 width: 8rem;
+                border-color:white;
+                background-color: white;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                &:hover{
+                    color: white;  
+                    background-color: #2eb872;
+                    transition: 300ms linear;
+                }
             }
             .stock{
                 width: 100%;
@@ -95,19 +113,19 @@
 
 .buttonReturn{
     margin: 1rem;
-            padding: 0.4rem 0.8rem;
-            border-color:white;
-            background-color: white;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 1rem;
-            &:hover{
-                color: white;  
-                border-color: white;
-                background-color: #212121;
-                transition: 300ms linear;
-            }
+    padding: 0.4rem 0.8rem;
+    border-color:white;
+    background-color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    &:hover{
+        color: white;  
+        border-color: white;
+        background-color: #212121;
+        transition: 300ms linear;
+    }
 }
 
 .footerContainer {
@@ -148,4 +166,8 @@
         flex-direction: column;
         align-items: center;
     }
+}
+
+.bg-NavBar{
+    background-color:#2eb872;
 }
