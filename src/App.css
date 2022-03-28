@@ -24,8 +24,8 @@
       width: 100%;
       justify-content: space-evenly;
       align-items: center; }
-    .body .navBar .activePage {
-      color: white; }
+    .body .navBar .bg-NavBar {
+      background-color: #2eb872; }
     .body .navBar .cartLogo {
       min-width: 2rem;
       max-height: 2.5rem; }
@@ -107,21 +107,20 @@
     width: fit-content;
     border-radius: 2rem;
     box-shadow: 0px 0px 2px 2px rgba(250, 70, 89, 0.7); }
-
-.buttonReturn {
-  margin: 1rem;
-  padding: 0.4rem 0.8rem;
-  border-color: white;
-  background-color: white;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem; }
-  .buttonReturn:hover {
-    color: white;
-    border-color: white;
-    background-color: #212121;
-    transition: 300ms linear; }
+    .itemDetailContainer .itemDetail .buttonReturn {
+      margin: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-color: white;
+      background-color: white;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem; }
+      .itemDetailContainer .itemDetail .buttonReturn:hover {
+        color: white;
+        border-color: white;
+        background-color: #212121;
+        transition: 300ms linear; }
 
 .footerContainer {
   margin-top: 3rem;
@@ -131,29 +130,26 @@
   text-align: center;
   align-items: center;
   background-image: linear-gradient(to top, #fa4659, #212121); }
+  .footerContainer .icons {
+    font-size: 3rem;
+    color: white;
+    padding-right: 1rem; }
+    .footerContainer .icons:hover {
+      color: #212121; }
   .footerContainer .imgFooterCampa {
     min-width: 7rem;
     min-height: 6.5rem;
     background-image: url(./images/campa.png); }
     .footerContainer .imgFooterCampa:hover {
       background-image: url(./images/campaNegro.png); }
-  .footerContainer .imgFooterKappa {
-    margin-top: 1rem;
-    width: 6.5rem;
-    height: 3.5rem;
-    background-image: url(./images/kappa.png); }
-    .footerContainer .imgFooterKappa:hover {
-      background-image: url(./images/kappaNegro.png); }
-  .footerContainer .iconos {
-    font-size: 3rem;
-    color: white;
-    padding-right: 1rem; }
-    .footerContainer .iconos:hover {
-      color: #212121; }
-  .footerContainer .patrocinadorFlex {
+  .footerContainer .sponsorFlex {
     display: flex;
     flex-direction: column;
     align-items: center; }
-
-.bg-NavBar {
-  background-color: #2eb872; }
+    .footerContainer .sponsorFlex .imgFooterKappa {
+      margin-top: 1rem;
+      width: 6.5rem;
+      height: 3.5rem;
+      background-image: url(./images/kappa.png); }
+      .footerContainer .sponsorFlex .imgFooterKappa:hover {
+        background-image: url(./images/kappaNegro.png); }

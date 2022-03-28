@@ -1,5 +1,9 @@
 FINAL PROJECT FOR THE REACT JS COURSE OF CODERHOUSE
 
+•Primera entrega del Proyecto Final
+
+-El proyecto se basa en un equipo de fútbol de amigos en el cual vengo trabajando desde los cursos de Desarrollo web y JavaScript
+-Las dependencias extras instaladas por npm son: react-bootstrap, bootstrap y @fortawesome/react-fontawesome. para poder utilizar el menú hamburguesa en pantallas mas chicas (pretendo posteriormente realizar toda la pagina responsive) y utilizo fontawesome para incluir los iconos de las redes sociales.
 
 
 
