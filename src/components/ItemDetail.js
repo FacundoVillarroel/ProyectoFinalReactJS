@@ -1,31 +1,48 @@
 import ItemCount from "./ItemCount"
 import { useNavigate } from "react-router-dom"
+import { useState } from "react";
 
 
 
-
-function ItemDetail ({item}){
+const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
+    const [quantity,setQuantity] = useState(1);
     const navigate = useNavigate()
-
     const handleNavigate = () => {
         navigate(-1)
+    }
+
+    function addToCart (){
+        const itemToAdd = {
+            id,
+            title,
+            price,
+            imgSrc,
+            quantity
+        } 
+        console.log(itemToAdd);        
     }
 
     return(
         <>  
             <div className="itemDetail container d-flex flex-column align-items-center">
                 <h3 className="m-3">
-                    {item.title}
+                    {title}
                 </h3>
-                <img src={item.imgSrc} alt={item.title} className="productImage mt-4 mb-2"/>
+                <img src={imgSrc} alt={title} className="productImage mt-4 mb-2"/>
                 <p className="fs-6 m-3">
-                    {item.description}
+                    {description}
                 </p >
                 <h4 className="mb-4">
-                    ${item.price}
+                    ${price}
                 </h4>
                 <div>
-                    <ItemCount stock = {item.stock} initial = {1}/>
+                    <ItemCount
+                    stock = {stock}
+                    setQuantity = {setQuantity}
+                    quantity = {quantity}
+                    addToCart = {addToCart}
+
+                    />
                 </div>
                 
                 <button className="buttonReturn" onClick={handleNavigate}>Volver</button>

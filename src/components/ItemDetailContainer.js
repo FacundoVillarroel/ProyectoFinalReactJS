@@ -15,7 +15,6 @@ function ItemDetailContainer(){
         setLoading(true)
         getProducts()
             .then((response) => {
-                console.log(itemId);
                 setItem( response.find((product) => product.id === `${itemId}`) )
             })
             .finally(() => {
@@ -30,7 +29,14 @@ function ItemDetailContainer(){
                     ?   <h2>Loading...</h2> 
                     :   <div className='itemDetailContainer text-center pb-4'>
                             <h2 className='m-5'>Detalles del producto</h2>
-                            <ItemDetail item = {item}/>
+                            <ItemDetail
+                            id = {item.id}
+                            title = {item.title}
+                            imgSrc = {item.imgSrc}
+                            description= {item.description}
+                            price = {item.price}
+                            stock = {item.stock}
+                            />
                         </div>
             }
         </>
