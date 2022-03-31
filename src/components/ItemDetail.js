@@ -4,8 +4,11 @@ import { useState } from "react";
 
 
 
+
 const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
     const [quantity,setQuantity] = useState(1);
+    const [added,setAdded] = useState(false);
+
     const navigate = useNavigate()
     const handleNavigate = () => {
         navigate(-1)
@@ -19,6 +22,7 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
             imgSrc,
             quantity
         } 
+        setAdded(true)
         console.log(itemToAdd);        
     }
 
@@ -41,6 +45,7 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
                     setQuantity = {setQuantity}
                     quantity = {quantity}
                     addToCart = {addToCart}
+                    added = {added}
 
                     />
                 </div>

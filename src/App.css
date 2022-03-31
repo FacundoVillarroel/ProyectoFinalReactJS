@@ -153,3 +153,18 @@
       background-image: url(./images/kappa.png); }
       .footerContainer .sponsorFlex .imgFooterKappa:hover {
         background-image: url(./images/kappaNegro.png); }
+
+.buttonReturn {
+  margin: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-color: white;
+  background-color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem; }
+  .buttonReturn:hover {
+    color: white;
+    border-color: white;
+    background-color: #212121;
+    transition: 300ms linear; }
