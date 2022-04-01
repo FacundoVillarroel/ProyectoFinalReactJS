@@ -210,3 +210,52 @@
         transition: 300ms linear;
     }
 }
+
+.productInCart{
+    margin: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid #fa4659;
+    align-items: center;
+}
+
+.buttonDeleteItem{
+    padding: 0.4rem;
+    color: #fa4659;
+    border-color:#fa4659;
+    background-color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    &:hover{
+        color: white;  
+        border-color: white;
+        background-color: #fa4659;
+        transition: 300ms linear;
+    }
+}
+
+.buttonPay{
+    padding: 0.4rem;
+    color: #2eb872;
+    border-color:#2eb872;
+    background-color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    &:hover{
+        color: white;  
+        border-color: white;
+        background-color: #2eb872;
+        transition: 300ms linear;
+    }
+}
+
+.dropdown-menu{
+    background-color: #2eb872;
+    :hover{
+    background-color: #2eb872;
+    color: white;
+    }
+}

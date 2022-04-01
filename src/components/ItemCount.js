@@ -1,4 +1,6 @@
-function ItemCount ({stock,setQuantity,quantity,addToCart,added}){
+import {BsFillCartPlusFill} from "react-icons/bs"
+
+function ItemCount ({stock,setQuantity,quantity,addToCart}){
     //Agregando al contador
     function handleClickPlus(){
         quantity < stock && setQuantity(quantity + 1)
@@ -20,7 +22,7 @@ function ItemCount ({stock,setQuantity,quantity,addToCart,added}){
                 <p className ="mt-2"> {quantity} </p>
                 <button className ="quantityButton me-2" onClick={handleClickPlus}> + </button>
             </div>
-            <button className="AddToCartButton" onClick={addToCart}> Agregar al carrito </button>     
+            <button className="AddToCartButton" onClick={addToCart}> Agregar al carrito <span><BsFillCartPlusFill/> </span> </button>     
             <p>Stock disponible: {stock}</p>
         </div>
     )

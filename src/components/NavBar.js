@@ -1,4 +1,4 @@
-import {Navbar,Container,Nav} from "react-bootstrap"
+import {Navbar,Container,Nav, NavDropdown} from "react-bootstrap"
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom"
 
@@ -11,10 +11,13 @@ function NavBar() {
                 <Navbar.Toggle/>
                 <Navbar.Collapse>
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/category/titular">Conjuntos Titulares</Nav.Link>
-                        <Nav.Link as={Link} to="/category/suplente">Conjuntos Suplentes</Nav.Link>
-                        <Nav.Link as={Link} to="/category/deVestir">Ropa de vestir</Nav.Link>
-                        <Nav.Link as={Link} to="/category/pelota">Pelotas</Nav.Link>
+                        <NavDropdown title="Categorias">                            
+                            <NavDropdown.Item as={Link} to="/category/titular">Conjuntos Titulares</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/category/suplente">Conjuntos Suplentes</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/category/deVestir">Ropa de vestir</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/category/pelota">Pelotas</NavDropdown.Item>
+                        </NavDropdown>
+                        
                     <Link to="/cart">
                         <CartWidget/>
                     </Link>
