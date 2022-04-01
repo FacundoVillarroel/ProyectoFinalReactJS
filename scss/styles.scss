@@ -54,22 +54,6 @@
                 margin: 0.5rem 0rem;
             }
         }
-        .AddToCartButton{
-            margin-bottom: 0.5rem;
-                padding: 0.4rem 0.8rem;
-                font-weight: 700;
-                font-size: 1rem;
-                width: 15rem;
-                border-color:white;
-                background-color: white;
-                border-radius: 0.5rem;
-                cursor: pointer;
-                &:hover{
-                    color: #2eb872;  
-                    background-color: white;
-                    transition: 300ms linear;
-                }
-        }
     }
     
     .productList{
@@ -148,6 +132,22 @@
                 background-color: #212121;
                 transition: 300ms linear;
             }
+        }
+        .AddToCartButton{
+            margin-bottom: 0.5rem;
+                padding: 0.4rem 0.8rem;
+                font-weight: 700;
+                font-size: 1rem;
+                width: 15rem;
+                border-color:white;
+                background-color: white;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                &:hover{
+                    color: #2eb872;  
+                    background-color: white;
+                    transition: 300ms linear;
+                }
         }
     }
 }

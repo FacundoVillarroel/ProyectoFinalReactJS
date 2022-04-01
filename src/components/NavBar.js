@@ -7,28 +7,18 @@ function NavBar() {
     return (
         <Navbar bg="NavBar" variant="light" sticky="top" expand="lg" collapseOnSelect className="navBar">
             <Container>
-            <Link to="/" className="activePage">
-                <Navbar.Brand href="#home">Tienda De Recreativo</Navbar.Brand>
-            </Link>
+                <Navbar.Brand as={Link} to="/">Tienda De Recreativo</Navbar.Brand>
                 <Navbar.Toggle/>
                 <Navbar.Collapse>
                     <Nav className="me-auto">
-                    <Link to="/category/titular">
-                        <Nav.Link href="#category/titular">Conjuntos Titulares</Nav.Link>
-                    </Link>
-                    <Link to="/category/suplente">
-                        <Nav.Link href="#category/suplente">Conjuntos Suplentes</Nav.Link>
-                    </Link>
-                    <Link to="/category/deVestir">
-                        <Nav.Link href="#category/deVestir">Ropa de vestir</Nav.Link>
-                    </Link>
-                    <Link to="/category/pelota">
-                        <Nav.Link href="#category/pelota">Pelotas</Nav.Link>
-                    </Link>  
+                        <Nav.Link as={Link} to="/category/titular">Conjuntos Titulares</Nav.Link>
+                        <Nav.Link as={Link} to="/category/suplente">Conjuntos Suplentes</Nav.Link>
+                        <Nav.Link as={Link} to="/category/deVestir">Ropa de vestir</Nav.Link>
+                        <Nav.Link as={Link} to="/category/pelota">Pelotas</Nav.Link>
                     <Link to="/cart">
                         <CartWidget/>
                     </Link>
-                        
+
                     </Nav>
                 </Navbar.Collapse>
                 
@@ -38,5 +28,4 @@ function NavBar() {
 }
 
 export default NavBar
-
 

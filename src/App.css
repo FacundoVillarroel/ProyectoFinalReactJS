@@ -41,20 +41,6 @@
         height: 1.3rem;
         width: 1.3rem;
         margin: 0.5rem 0rem; }
-    .body .itemCount .AddToCartButton {
-      margin-bottom: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      font-weight: 700;
-      font-size: 1rem;
-      width: 15rem;
-      border-color: white;
-      background-color: white;
-      border-radius: 0.5rem;
-      cursor: pointer; }
-      .body .itemCount .AddToCartButton:hover {
-        color: #2eb872;
-        background-color: white;
-        transition: 300ms linear; }
   .body .productList {
     justify-content: center; }
     .body .productList .product {
@@ -120,6 +106,20 @@
         color: white;
         border-color: white;
         background-color: #212121;
+        transition: 300ms linear; }
+    .itemDetailContainer .itemDetail .AddToCartButton {
+      margin-bottom: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      font-weight: 700;
+      font-size: 1rem;
+      width: 15rem;
+      border-color: white;
+      background-color: white;
+      border-radius: 0.5rem;
+      cursor: pointer; }
+      .itemDetailContainer .itemDetail .AddToCartButton:hover {
+        color: #2eb872;
+        background-color: white;
         transition: 300ms linear; }
 
 .footerContainer {

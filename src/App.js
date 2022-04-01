@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter,Routes, Route, Navigate} from "react-router-dom"
 import Footer from './components/Footer';
 import Cart from './components/Cart';
+import { CartProvider } from './context/CartContext';
 import './App.css';
 
 
@@ -15,21 +16,24 @@ import './App.css';
 function App() {
   
   return (
-    <BrowserRouter>
-      <div className="body container-fluid">
-        <Header />
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer/>} />
-          <Route path="/category/:categoryId" element={<ItemListContainer/>} />
-          <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
-          <Route path='/cart' element= {<Cart/>} />
-          <Route path="*" element={ <Navigate to="/"/>}/> 
-        </Routes>
+    <CartProvider>
+      <BrowserRouter>
+        <div className="body container-fluid">
+          <Header />
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer/>} />
+            <Route path="/category/:categoryId" element={<ItemListContainer/>} />
+            <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
+            <Route path='/cart' element= {<Cart/>} />
+            <Route path="*" element={ <Navigate to="/"/>}/> 
+          </Routes>
 
-        <Footer/>
-      </div>
-    </BrowserRouter>
+          <Footer/>
+        </div>
+      </BrowserRouter>
+    </CartProvider>
+    
     
   );
 }

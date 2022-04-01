@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 function ItemCount ({stock,setQuantity,quantity,addToCart,added}){
     //Agregando al contador
     function handleClickPlus(){
@@ -21,14 +20,7 @@ function ItemCount ({stock,setQuantity,quantity,addToCart,added}){
                 <p className ="mt-2"> {quantity} </p>
                 <button className ="quantityButton me-2" onClick={handleClickPlus}> + </button>
             </div>
-            {   !added 
-                ?<button className="AddToCartButton" onClick={addToCart}> Agregar al carrito </button>
-                :<Link to= "/cart" className="AddToCartButton"> Ir al carrito</Link>
-
-
-            }
-            
-            
+            <button className="AddToCartButton" onClick={addToCart}> Agregar al carrito </button>     
             <p>Stock disponible: {stock}</p>
         </div>
     )
