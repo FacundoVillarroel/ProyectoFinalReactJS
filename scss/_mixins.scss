@@ -1,0 +1,15 @@
+@mixin buttons($fontWeight,$fontsize,$color,$borderColor,$bgColor,$colorHover,$borderColorHover,$bgColorHover){
+    font-weight: $fontWeight;
+    font-size: $fontsize;
+    color: $color;
+    border-color: $borderColor;
+    background-color: $bgColor;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    &:hover{
+        color: $colorHover;
+        border-color: $borderColorHover;
+        background-color: $bgColorHover;
+        transition: 300ms linear;
+    }
+}

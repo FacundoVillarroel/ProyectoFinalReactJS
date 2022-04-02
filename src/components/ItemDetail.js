@@ -3,13 +3,21 @@ import { useNavigate } from "react-router-dom"
 import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import SelectSize from "./SelectSize";
 
-
+const sizeOptions = [
+    {value: 'XL', text: 'XL'},
+    {value: 'L', text: 'L'},
+    {value: 'M', text: 'M'},
+    {value: 'S', text: 'S'},
+    {value: 'XS', text: 'XS'},
+]
 
 const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
     const {addItemToCart,isInCart} = useContext(CartContext)
 
     const [quantity,setQuantity] = useState(1);
+    const [size,setSize] = useState("XL")
 
     const navigate = useNavigate()
     const handleNavigate = () => {
@@ -22,7 +30,8 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
             title,
             price,
             imgSrc,
-            quantity
+            quantity,
+            size
         } 
         addItemToCart(itemToAdd)       
     }
@@ -40,6 +49,10 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
                 <h4 className="mb-4">
                     ${price}
                 </h4>
+                <SelectSize
+                sizeOptions={sizeOptions}
+                setSize={setSize}
+                />
                 <div>
                     {   isInCart(id)
                             ? <Link to= "/cart" className="AddToCartButton"> Ir al carrito</Link>

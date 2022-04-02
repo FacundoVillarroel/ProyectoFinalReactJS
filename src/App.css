@@ -6,9 +6,9 @@
 .body {
   font-size: 62.5%;
   background-color: #212121;
-  color: white; }
+  color: #ffffff; }
   .body .header {
-    color: white;
+    color: #ffffff;
     background-image: linear-gradient(to top, #212121, #fa4659); }
     .body .header .logo {
       max-width: 7.5rem; }
@@ -34,7 +34,7 @@
     width: 16rem;
     border-radius: 2rem; }
     .body .itemCount .quantityButtonContainer {
-      width: 15rem;
+      width: 8rem;
       border: #2eb872 solid 0.1rem; }
       .body .itemCount .quantityButtonContainer .quantityButton {
         border-radius: 0.3rem;
@@ -54,7 +54,7 @@
         height: 2.8rem;
         border-top-left-radius: 1.3rem;
         border-top-right-radius: 1.3rem;
-        color: white;
+        color: #ffffff;
         background-color: #2eb872;
         border-bottom: #2eb872 solid 0.1rem;
         font-size: 1.5rem;
@@ -62,17 +62,19 @@
       .body .productList .product .productPrice {
         font-size: 1rem; }
       .body .productList .product .viewDetails {
-        margin: 1rem;
-        padding: 0.4rem 0.8rem;
         font-weight: 700;
         font-size: 1rem;
-        width: 8rem;
-        border-color: white;
-        background-color: white;
+        color: #212121;
+        border-color: #ffffff;
+        background-color: #ffffff;
         border-radius: 0.5rem;
-        cursor: pointer; }
+        cursor: pointer;
+        margin: 1rem;
+        padding: 0.4rem 0.8rem;
+        width: 8rem; }
         .body .productList .product .viewDetails:hover {
-          color: white;
+          color: #ffffff;
+          border-color: #2eb872;
           background-color: #2eb872;
           transition: 300ms linear; }
       .body .productList .product .stock {
@@ -93,18 +95,21 @@
     width: fit-content;
     border-radius: 2rem;
     box-shadow: 0px 0px 2px 2px rgba(250, 70, 89, 0.7); }
+    .itemDetailContainer .itemDetail .selectSize {
+      font-size: 1rem; }
     .itemDetailContainer .itemDetail .buttonReturn {
-      margin: 1rem;
-      padding: 0.4rem 0.8rem;
-      border-color: white;
-      background-color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #212121;
+      border-color: #ffffff;
+      background-color: #ffffff;
       border-radius: 0.5rem;
       cursor: pointer;
-      font-weight: 700;
-      font-size: 1rem; }
+      margin: 1rem;
+      padding: 0.4rem 0.8rem; }
       .itemDetailContainer .itemDetail .buttonReturn:hover {
-        color: white;
-        border-color: white;
+        color: #ffffff;
+        border-color: #ffffff;
         background-color: #212121;
         transition: 300ms linear; }
     .itemDetailContainer .itemDetail .AddToCartButton {
@@ -113,13 +118,13 @@
       font-weight: 700;
       font-size: 1rem;
       width: 15rem;
-      border-color: white;
-      background-color: white;
+      border-color: #ffffff;
+      background-color: #ffffff;
       border-radius: 0.5rem;
       cursor: pointer; }
       .itemDetailContainer .itemDetail .AddToCartButton:hover {
         color: #2eb872;
-        background-color: white;
+        background-color: #ffffff;
         transition: 300ms linear; }
 
 .footerContainer {
@@ -132,7 +137,7 @@
   background-image: linear-gradient(to top, #fa4659, #212121); }
   .footerContainer .icons {
     font-size: 3rem;
-    color: white;
+    color: #ffffff;
     padding-right: 1rem; }
     .footerContainer .icons:hover {
       color: #212121; }
@@ -155,17 +160,18 @@
         background-image: url(./images/kappaNegro.png); }
 
 .buttonReturn {
-  margin: 1rem;
-  padding: 0.4rem 0.8rem;
-  border-color: white;
-  background-color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #212121;
+  border-color: #ffffff;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem; }
+  margin: 1rem;
+  padding: 0.4rem 0.8rem; }
   .buttonReturn:hover {
-    color: white;
-    border-color: white;
+    color: #ffffff;
+    border-color: #ffffff;
     background-color: #212121;
     transition: 300ms linear; }
 
@@ -176,32 +182,32 @@
   align-items: center; }
 
 .buttonDeleteItem {
-  padding: 0.4rem;
+  font-weight: 700;
+  font-size: 1rem;
   color: #fa4659;
   border-color: #fa4659;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem; }
+  padding: 0.4rem; }
   .buttonDeleteItem:hover {
-    color: white;
-    border-color: white;
+    color: #ffffff;
+    border-color: #ffffff;
     background-color: #fa4659;
     transition: 300ms linear; }
 
 .buttonPay {
-  padding: 0.4rem;
+  font-weight: 700;
+  font-size: 1rem;
   color: #2eb872;
   border-color: #2eb872;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem; }
+  padding: 0.4rem; }
   .buttonPay:hover {
-    color: white;
-    border-color: white;
+    color: #ffffff;
+    border-color: #ffffff;
     background-color: #2eb872;
     transition: 300ms linear; }
 
@@ -209,4 +215,4 @@
   background-color: #2eb872; }
   .dropdown-menu :hover {
     background-color: #2eb872;
-    color: white; }
+    color: #ffffff; }

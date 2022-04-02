@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 * {
     margin: 0px;
     padding: 0px;
@@ -5,11 +8,11 @@
 
 .body {
     font-size: 62.5%; 
-    background-color: #212121;
-    color: white;
+    background-color: $blackColor;
+    color: $whiteColor;
     .header{
-        color: white;
-        background-image: linear-gradient(to top, #212121, #fa4659);
+        color: $whiteColor;
+        background-image: linear-gradient(to top, $blackColor, $redColor);
         .logo{
             max-width: 7.5rem;
         }
@@ -20,7 +23,7 @@
     
     a{
         text-decoration: none;
-        color: #212121;
+        color: $blackColor;
         font-size: 1.7rem;
     }
 
@@ -31,9 +34,9 @@
             align-items: center;
         }
         .bg-NavBar{
-            background-color:#2eb872;
+            background-color:$greenColor;
         }
-        background-color: #2eb872;
+        background-color: $greenColor;
         .cartLogo{
             min-width: 2rem;
             max-height: 2.5rem;
@@ -41,12 +44,12 @@
     }
     
     .itemCount{
-        background-color: #2eb872;
+        background-color: $greenColor;
         width: 16rem;
         border-radius: 2rem;
         .quantityButtonContainer{
-            width: 15rem;
-            border: #2eb872 solid 0.1rem;
+            width: 8rem;
+            border: $greenColor solid 0.1rem;
             .quantityButton{
                 border-radius: 0.3rem;
                 height: 1.3rem;
@@ -60,7 +63,7 @@
         justify-content: center;
         .product{
             width: 20rem;
-            border: #2eb872 solid 0.3rem;
+            border: $greenColor solid 0.3rem;
             border-radius: 1.7rem;
             box-shadow: 0px 0px 3px 3px rgba(46, 184, 114, 0.7);
             margin: 1.5rem;
@@ -69,9 +72,9 @@
                 height: 2.8rem;
                 border-top-left-radius: 1.3rem;
                 border-top-right-radius: 1.3rem;
-                color: white;
-                background-color: #2eb872;
-                border-bottom: #2eb872 solid 0.1rem;
+                color: $whiteColor;
+                background-color: $greenColor;
+                border-bottom: $greenColor solid 0.1rem;
                 font-size: 1.5rem;
                 text-align: center;
             }
@@ -79,26 +82,16 @@
                 font-size: 1rem;
             }
             .viewDetails{
+                @include buttons (700,1rem,$blackColor,$whiteColor,$whiteColor,$whiteColor,$greenColor,$greenColor);
                 margin: 1rem;
                 padding: 0.4rem 0.8rem;
-                font-weight: 700;
-                font-size: 1rem;
                 width: 8rem;
-                border-color:white;
-                background-color: white;
-                border-radius: 0.5rem;
-                cursor: pointer;
-                &:hover{
-                    color: white;  
-                    background-color: #2eb872;
-                    transition: 300ms linear;
-                }
             }
             .stock{
                 width: 100%;
                 border-bottom-left-radius: 3rem;
                 border-bottom-right-radius: 3rem;
-                background-color: #2eb872;
+                background-color: $greenColor;
                 text-align: center;
             }
         }
@@ -117,21 +110,13 @@
         width: fit-content;
         border-radius: 2rem;
         box-shadow: 0px 0px 2px 2px rgba(250, 70, 89, 0.7);
+        .selectSize{
+            font-size: 1rem;
+        }
         .buttonReturn{
+            @include buttons (700,1rem,$blackColor,$whiteColor,$whiteColor,$whiteColor,$whiteColor,$blackColor);
             margin: 1rem;
             padding: 0.4rem 0.8rem;
-            border-color:white;
-            background-color: white;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 1rem;
-            &:hover{
-                color: white;  
-                border-color: white;
-                background-color: #212121;
-                transition: 300ms linear;
-            }
         }
         .AddToCartButton{
             margin-bottom: 0.5rem;
@@ -139,13 +124,13 @@
                 font-weight: 700;
                 font-size: 1rem;
                 width: 15rem;
-                border-color:white;
-                background-color: white;
+                border-color:$whiteColor;
+                background-color: $whiteColor;
                 border-radius: 0.5rem;
                 cursor: pointer;
                 &:hover{
-                    color: #2eb872;  
-                    background-color: white;
+                    color: $greenColor;  
+                    background-color: $whiteColor;
                     transition: 300ms linear;
                 }
         }
@@ -159,13 +144,13 @@
     justify-content: space-evenly;
     text-align: center;
     align-items: center;
-    background-image: linear-gradient(to top, #fa4659, #212121);
+    background-image: linear-gradient(to top, $redColor, $blackColor);
     .icons {
         font-size: 3rem;
-        color: white;
+        color: $whiteColor;
         padding-right: 1rem;
         &:hover{
-            color: #212121;
+            color: $blackColor;
         }
     }
     .imgFooterCampa {
@@ -195,67 +180,33 @@
 
 
 .buttonReturn{
+    @include buttons (700,1rem,$blackColor,$whiteColor,$whiteColor,$whiteColor,$whiteColor,$blackColor);
     margin: 1rem;
     padding: 0.4rem 0.8rem;
-    border-color:white;
-    background-color: white;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1rem;
-    &:hover{
-        color: white;  
-        border-color: white;
-        background-color: #212121;
-        transition: 300ms linear;
-    }
 }
 
 .productInCart{
     margin: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 0.1rem solid #fa4659;
+    border-bottom: 0.1rem solid $redColor;
     align-items: center;
 }
 
 .buttonDeleteItem{
+    @include buttons(700,1rem,$redColor,$redColor,$whiteColor,$whiteColor,$whiteColor,$redColor);
     padding: 0.4rem;
-    color: #fa4659;
-    border-color:#fa4659;
-    background-color: white;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1rem;
-    &:hover{
-        color: white;  
-        border-color: white;
-        background-color: #fa4659;
-        transition: 300ms linear;
-    }
 }
 
 .buttonPay{
+    @include buttons(700,1rem,$greenColor,$greenColor,$whiteColor,$whiteColor,$whiteColor,$greenColor);
     padding: 0.4rem;
-    color: #2eb872;
-    border-color:#2eb872;
-    background-color: white;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1rem;
-    &:hover{
-        color: white;  
-        border-color: white;
-        background-color: #2eb872;
-        transition: 300ms linear;
-    }
+    
 }
 
 .dropdown-menu{
-    background-color: #2eb872;
+    background-color: $greenColor;
     :hover{
-    background-color: #2eb872;
-    color: white;
+    background-color: $greenColor;
+    color: $whiteColor;
     }
 }

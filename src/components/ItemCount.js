@@ -16,7 +16,7 @@ function ItemCount ({stock,setQuantity,quantity,addToCart}){
 
     return (
         <div className ="itemCount d-flex flex-column align-items-center">
-            <h4 className="m-3">Cantidad</h4>
+            <h4 className="m-2">Cantidad</h4>
             <div className ="quantityButtonContainer d-flex justify-content-between">
                 <button className ="quantityButton ms-2" onClick={handleClickMinus}> - </button>
                 <p className ="mt-2"> {quantity} </p>
