@@ -12,12 +12,17 @@ const sizeOptions = [
     {value: 'S', text: 'S'},
     {value: 'XS', text: 'XS'},
 ]
+const idPelota = ["Pelota1","Pelota2","Pelota3","Pelota4"]
 
 const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
     const {addItemToCart,isInCart} = useContext(CartContext)
 
     const [quantity,setQuantity] = useState(1);
-    const [size,setSize] = useState("XL")
+    const [size,setSize] = useState("")
+
+    const isIdPelota = (id) =>{
+        return idPelota.some(prod => prod === id)
+    }
 
     const navigate = useNavigate()
     const handleNavigate = () => {
@@ -25,7 +30,8 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
     }
 
     function addToCart (){
-        const itemToAdd = {
+        if (size==="" && !isIdPelota(id)){alert("debes elegir un talle")}
+        else {const itemToAdd = {
             id,
             title,
             price,
@@ -33,7 +39,7 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
             quantity,
             size
         } 
-        addItemToCart(itemToAdd)       
+        addItemToCart(itemToAdd) }
     }
 
     return(
@@ -49,10 +55,13 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
                 <h4 className="mb-4">
                     ${price}
                 </h4>
-                <SelectSize
-                sizeOptions={sizeOptions}
-                setSize={setSize}
-                />
+                {   isIdPelota(id)
+                    ?   <></> 
+                    :   <SelectSize
+                        sizeOptions={sizeOptions}
+                        setSize={setSize}s
+                        /> 
+                }
                 <div>
                     {   isInCart(id)
                             ? <Link to= "/cart" className="AddToCartButton"> Ir al carrito</Link>
@@ -64,7 +73,6 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
                             />
                             }             
                 </div>
-                
                 <button className="buttonReturn" onClick={handleNavigate}>Volver</button>
             </div>
         </>
