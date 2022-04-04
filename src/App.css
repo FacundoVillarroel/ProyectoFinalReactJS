@@ -223,3 +223,34 @@
   .dropdown-menu :hover {
     background-color: #2eb872;
     color: #ffffff; }
+
+.datosJugador .datosJugador {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem; }
+
+.contenedorDatosJugador {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  column-gap: 1rem; }
+
+.yellowCard {
+  color: yellow; }
+
+.redCard {
+  color: red; }
+
+.allPlayers {
+  background-color: #212121;
+  color: #ffffff; }
+
+.player {
+  background-color: #fa4659; }
+
+.accordion-button {
+  background-color: #212121;
+  color: #ffffff; }
+  .accordion-button:not(.collapsed) {
+    background-color: #212121;
+    color: #ffffff; }

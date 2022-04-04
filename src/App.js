@@ -7,6 +7,7 @@ import {BrowserRouter,Routes, Route, Navigate} from "react-router-dom"
 import Footer from './components/Footer';
 import Cart from './components/Cart';
 import { CartProvider } from './context/CartContext';
+import PlayersContainer from './components/playersContainer';
 import './App.css';
 
 
@@ -26,9 +27,10 @@ function App() {
             <Route path="/category/:categoryId" element={<ItemListContainer/>} />
             <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
             <Route path='/cart' element= {<Cart/>} />
+            <Route path='/jugadores' element={<PlayersContainer/>}/>
             <Route path="*" element={ <Navigate to="/"/>}/> 
           </Routes>
-
+          
           <Footer/>
         </div>
       </BrowserRouter>

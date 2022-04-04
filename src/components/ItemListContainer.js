@@ -31,7 +31,7 @@ function ItemListContainer(){
         <>
             {
                 loading 
-                    ? <h2>Loading...</h2> 
+                    ? <h2 className="text-center my-5">Loading...</h2> 
                     :   <div className="main container pb-3">
                             <h2 className= "text-center m-5">Bienvenido/a a la tienda de Recreativo</h2>
                             <ItemList products={productsList}/>

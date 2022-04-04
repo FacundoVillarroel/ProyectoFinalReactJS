@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 
 function NavBar() {
-const [activeHome,setActiveHome] = useState(false)
+const [activeHome,setActiveHome] = useState(true)
 const [activeFixture,setActiveFixture] = useState(false)
 const [activeGoles,setActiveGoles] = useState(false)
 const [activeJugadores,setActiveJugadores] = useState(false)
