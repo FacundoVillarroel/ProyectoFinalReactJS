@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -13,12 +14,15 @@
     .body .header .logo {
       max-width: 7.5rem; }
     .body .header .titulo {
-      font-size: 4.5rem; }
+      font-family: 'Alfa Slab One', cursive;
+      font-size: 3rem; }
   .body a {
     text-decoration: none;
     color: #212121;
     font-size: 1.7rem; }
   .body .navBar {
+    height: 3rem;
+    font-weight: 500;
     background-color: #2eb872; }
     .body .navBar .me-auto {
       width: 100%;
@@ -26,9 +30,12 @@
       align-items: center; }
     .body .navBar .bg-NavBar {
       background-color: #2eb872; }
-    .body .navBar .cartLogo {
-      min-width: 2rem;
-      max-height: 2.5rem; }
+    .body .navBar .nav-link {
+      color: #212121; }
+      .body .navBar .nav-link:hover {
+        color: #ffffff !important; }
+    .body .navBar .active {
+      color: #ffffff !important; }
   .body .itemCount {
     background-color: #2eb872;
     width: 16rem;

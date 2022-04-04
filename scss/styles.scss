@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
 * {
     margin: 0px;
@@ -7,6 +8,7 @@
     box-sizing: border-box; }
 
 .body {
+    
     font-size: 62.5%; 
     background-color: $blackColor;
     color: $whiteColor;
@@ -17,7 +19,8 @@
             max-width: 7.5rem;
         }
         .titulo{
-            font-size: 4.5rem;
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 3rem;
         }
     }
     
@@ -28,6 +31,9 @@
     }
 
     .navBar{
+        height: 3rem;
+        font-weight: 500;
+        background-color: $greenColor;
         .me-auto{
             width: 100%;
             justify-content: space-evenly;
@@ -36,10 +42,14 @@
         .bg-NavBar{
             background-color:$greenColor;
         }
-        background-color: $greenColor;
-        .cartLogo{
-            min-width: 2rem;
-            max-height: 2.5rem;
+        .nav-link{
+            color: $blackColor;
+            &:hover{
+                color: $whiteColor !important;
+            }
+        }
+        .active{
+            color: $whiteColor !important;
         }
     }
     
