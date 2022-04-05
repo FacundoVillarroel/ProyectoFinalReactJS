@@ -137,7 +137,9 @@
                 border-color:$whiteColor;
                 background-color: $whiteColor;
                 border-radius: 0.5rem;
-                cursor: pointer;
+                &[disabled]:hover{
+                    color: #10103d4d;
+                }
                 &:hover{
                     color: $greenColor;  
                     background-color: $whiteColor;
@@ -267,4 +269,11 @@
         border-radius: 50%;
         transition: transform 200ms;
         }
+}
+
+.warning{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: $redColor;
+    margin-bottom: 0;
 }

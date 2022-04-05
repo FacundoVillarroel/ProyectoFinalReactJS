@@ -14,14 +14,27 @@ function Cart () {
         emptyCart()
     }
 
+    if (cart.length===0){
+        return (
+            <div className="text-center">
+                <h2 className="my-5">Tu carrito esta vacio</h2>
+                <Link to="/">
+                    <button className="buttonReturn"> Ir a la tienda </button>
+                </Link>
+            </div>
+            
+        )
+    }
+    
+
     return(
         <div className="text-center">
-            <h1 className="my-5">Carrito</h1>
+            <h2 className="my-5">Carrito</h2>
             <div className="container">
                 <div className="row gx-5 pb-3 productInCart justify-content-start">
                     <h3 className="col-3 text-start"> Nombre del producto</h3>
                     <h3 className="col-3"> Imagen </h3>
-                    <h3 className="col-2"> Precio </h3>
+                    <h3 className="col-2"> Precio Unitario</h3>
                     <h3 className="col-2"> Cantidad </h3>
                     <h3 className="col-1"> Talle</h3>
                 </div>

@@ -127,8 +127,9 @@
       width: 15rem;
       border-color: #ffffff;
       background-color: #ffffff;
-      border-radius: 0.5rem;
-      cursor: pointer; }
+      border-radius: 0.5rem; }
+      .itemDetailContainer .itemDetail .AddToCartButton[disabled]:hover {
+        color: #10103d4d; }
       .itemDetailContainer .itemDetail .AddToCartButton:hover {
         color: #2eb872;
         background-color: #ffffff;
@@ -505,3 +506,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+
+.warning {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fa4659;
+  margin-bottom: 0; }

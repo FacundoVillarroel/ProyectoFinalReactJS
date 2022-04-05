@@ -12,17 +12,11 @@ const sizeOptions = [
     {value: 'S', text: 'S'},
     {value: 'XS', text: 'XS'},
 ]
-const idPelota = ["Pelota1","Pelota2","Pelota3","Pelota4"]
 
-const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
+const ItemDetail = ({id,title,imgSrc,description,price,stock,category}) => {
     const {addItemToCart,isInCart} = useContext(CartContext)
-
     const [quantity,setQuantity] = useState(1);
     const [size,setSize] = useState("")
-
-    const isIdPelota = (id) =>{
-        return idPelota.some(prod => prod === id)
-    }
 
     const navigate = useNavigate()
     const handleNavigate = () => {
@@ -30,8 +24,7 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
     }
 
     function addToCart (){
-        if (size==="" && !isIdPelota(id)){alert("debes elegir un talle")}
-        else {const itemToAdd = {
+        const itemToAdd = {
             id,
             title,
             price,
@@ -39,7 +32,10 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
             quantity,
             size
         } 
-        addItemToCart(itemToAdd) }
+        if (size==="" && category !== "pelota"){alert("debes elegir un talle")}
+            else{
+            addItemToCart(itemToAdd)
+            }
     }
 
     return(
@@ -55,12 +51,10 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
                 <h4 className="mb-4">
                     ${price}
                 </h4>
-                {   isIdPelota(id)
-                    ?   <></> 
-                    :   <SelectSize
+                {   category !== "pelota" && <SelectSize
                         sizeOptions={sizeOptions}
-                        setSize={setSize}s
-                        /> 
+                        setSize={setSize}
+                        />
                 }
                 <div>
                     {   isInCart(id)
@@ -70,6 +64,8 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock}) => {
                             setQuantity = {setQuantity}
                             quantity = {quantity}
                             addToCart = {addToCart}
+                            category = {category}
+                            size = {size}
                             />
                             }             
                 </div>

@@ -1,9 +1,12 @@
 import {Navbar,Container,Nav, NavDropdown} from "react-bootstrap"
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom"
-import { useState } from "react";
+import { useState,useContext } from "react";
+import {CartContext} from "../context/CartContext"
 
 function NavBar() {
+    const {cartQuantity} = useContext(CartContext)
+
 const [activeHome,setActiveHome] = useState(true)
 const [activeFixture,setActiveFixture] = useState(false)
 const [activeGoles,setActiveGoles] = useState(false)
@@ -54,9 +57,7 @@ const [activeTienda,setActiveTienda] = useState(false)
                             <NavDropdown.Item as={Link} to="/category/pelota" onClick={handleClickTienda}>Pelotas</NavDropdown.Item>
                         </NavDropdown>
                         
-                    <Link to="/cart">
-                        <CartWidget/>
-                    </Link>
+                        {cartQuantity() !== 0 && <Link to="/cart"> <CartWidget/> </Link>}
 
                     </Nav>
                 </Navbar.Collapse>

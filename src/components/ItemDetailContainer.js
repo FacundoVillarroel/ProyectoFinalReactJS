@@ -36,6 +36,7 @@ function ItemDetailContainer(){
                             description= {item.description}
                             price = {item.price}
                             stock = {item.stock}
+                            category = {item.category}
                             />
                         </div>
             }
