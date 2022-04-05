@@ -221,14 +221,14 @@
     }
 }
 
-.datosJugador{
-    .datosJugador{
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-    }
+.playerData{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-size: 1rem;
 }
-.contenedorDatosJugador{
+
+.playerDataContainer{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -254,4 +254,17 @@
         background-color: $blackColor;
         color: $whiteColor;
     }
+}
+
+@for $i from 1 through 25{
+    .jugadorImagen#{$i}{
+        background-image: url(./images/jugador-#{$i}.jpg);
+        width: 5rem;
+        height: 5rem;
+        background-size: cover;
+        background-position: center;
+        margin-right: 1rem;
+        border-radius: 50%;
+        transition: transform 200ms;
+        }
 }

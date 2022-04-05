@@ -9,7 +9,7 @@ function CartWidget () {
     return(
         <div >
             <span className="fs-2"><BsFillCartFill/></span>
-            <span>{cartQuantity()}</span>
+            <span>{cartQuantity() || ""}</span>
         </div>
         
     )

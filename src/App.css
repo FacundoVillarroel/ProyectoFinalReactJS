@@ -224,12 +224,13 @@
     background-color: #2eb872;
     color: #ffffff; }
 
-.datosJugador .datosJugador {
+.playerData {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem; }
+  row-gap: 1rem;
+  font-size: 1rem; }
 
-.contenedorDatosJugador {
+.playerDataContainer {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -254,3 +255,253 @@
   .accordion-button:not(.collapsed) {
     background-color: #212121;
     color: #ffffff; }
+
+.jugadorImagen1 {
+  background-image: url(./images/jugador-1.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen2 {
+  background-image: url(./images/jugador-2.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen3 {
+  background-image: url(./images/jugador-3.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen4 {
+  background-image: url(./images/jugador-4.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen5 {
+  background-image: url(./images/jugador-5.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen6 {
+  background-image: url(./images/jugador-6.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen7 {
+  background-image: url(./images/jugador-7.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen8 {
+  background-image: url(./images/jugador-8.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen9 {
+  background-image: url(./images/jugador-9.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen10 {
+  background-image: url(./images/jugador-10.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen11 {
+  background-image: url(./images/jugador-11.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen12 {
+  background-image: url(./images/jugador-12.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen13 {
+  background-image: url(./images/jugador-13.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen14 {
+  background-image: url(./images/jugador-14.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen15 {
+  background-image: url(./images/jugador-15.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen16 {
+  background-image: url(./images/jugador-16.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen17 {
+  background-image: url(./images/jugador-17.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen18 {
+  background-image: url(./images/jugador-18.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen19 {
+  background-image: url(./images/jugador-19.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen20 {
+  background-image: url(./images/jugador-20.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen21 {
+  background-image: url(./images/jugador-21.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen22 {
+  background-image: url(./images/jugador-22.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen23 {
+  background-image: url(./images/jugador-23.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen24 {
+  background-image: url(./images/jugador-24.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen25 {
+  background-image: url(./images/jugador-25.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
