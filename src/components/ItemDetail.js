@@ -31,7 +31,7 @@ const ItemDetail = ({id,title,imgSrc,description,price,stockTotal,category,talle
         })
     }
 
-    if (category === "pelota" && newStock.sizeName === ""){
+    if (category === "pelota"){
         newStock.stock = stockTotal
     }
     

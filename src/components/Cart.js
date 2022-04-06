@@ -18,7 +18,7 @@ function Cart () {
         return (
             <div className="text-center">
                 <h2 className="my-5">Tu carrito esta vacio</h2>
-                <Link to="/">
+                <Link to="/tienda">
                     <button className="buttonReturn"> Ir a la tienda </button>
                 </Link>
             </div>
@@ -61,7 +61,7 @@ function Cart () {
                 <button className="buttonDeleteItem m-5" onClick={emptyCart}> Vaciar Carrito</button>
                 <button className="buttonPay m-5" onClick={haddlePay}> Terminar compra </button>
             </div>
-            <Link to="/">
+            <Link to="/tienda">
                 <button className="buttonReturn"> Continuar comprando </button>
             </Link>
             

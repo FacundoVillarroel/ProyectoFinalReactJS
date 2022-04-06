@@ -45,3 +45,11 @@
         transition: transform 200ms;
         }
 }
+
+.dropdown-menu{
+    background-color: $greenColor;
+    :hover{
+    background-color: $greenColor;
+    color: $whiteColor;
+    }
+}

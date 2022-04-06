@@ -44,12 +44,12 @@ const [activeTienda,setActiveTienda] = useState(false)
                 <Navbar.Toggle/>
                 <Navbar.Collapse>
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to ="/home" onClick={handleClickHome} active={activeHome} >Home</Nav.Link>
+                        <Nav.Link as={Link} to ="/" onClick={handleClickHome} active={activeHome} >Home</Nav.Link>
                         <Nav.Link as={Link} to ="/fixture" onClick={handleClickFixture} active={activeFixture} >Fixture</Nav.Link>
                         <Nav.Link as={Link} to ="/goles" onClick={handleClickGoles} active={activeGoles}>Goles</Nav.Link>
                         <Nav.Link as={Link} to ="/jugadores" onClick={handleClickJugadores} active={activeJugadores}>Jugadores</Nav.Link>
                         <Nav.Link as={Link} to ="/nosotros" onClick={handleClickNosotros} active={activeNosotros}>Sobre Nosotros</Nav.Link>
-                        <Nav.Link as={Link} to ="/" onClick={handleClickTienda} active={activeTienda}>Tienda De Recreativo</Nav.Link>
+                        <Nav.Link as={Link} to ="/tienda" onClick={handleClickTienda} active={activeTienda}>Tienda De Recreativo</Nav.Link>
                         <NavDropdown title="Categorias" >                            
                             <NavDropdown.Item as={Link} to="/category/titular" onClick={handleClickTienda}>Conjuntos Titulares</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/category/suplente" onClick={handleClickTienda}>Conjuntos Suplentes</NavDropdown.Item>

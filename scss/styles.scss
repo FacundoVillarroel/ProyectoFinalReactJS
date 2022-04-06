@@ -166,17 +166,85 @@
     
 }
 
-.dropdown-menu{
-    background-color: $greenColor;
-    :hover{
-    background-color: $greenColor;
-    color: $whiteColor;
-    }
-}
-
 .warning{
     font-size: 0.7rem;
     font-weight: 600;
     color: $redColor;
     margin-bottom: 0;
 }
+
+
+/* Home  --In process*/
+
+.bordeRedondeado {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.titular {
+    font-weight: 600;
+    padding-bottom: 1rem;
+    text-align: center; }
+
+
+th {
+    border: 0.1rem solid $blackColor;
+    padding: 0.5rem;
+    text-align: center; }
+
+td {
+    border: 0.1rem solid $blackColor;
+    padding: 0.5rem;
+    text-align: start; }
+
+.fondo {
+    background-color: #2eb872;
+    border: solid #212121 0.1rem; }
+
+.proximoPartido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: outset 0.2rem;
+    background-image: url(../src/images/pastoSintetico.jpg);
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    a{
+        text-decoration: none;
+        color: $whiteColor;
+        .titularSecundario:hover{
+        transition: font-size 0.5s;
+        font-size: 2.5rem;
+        }
+    }
+}
+.imgEscudo{
+    max-width: 5rem;
+}
+.vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titularSecundario {
+    padding-top: 2rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    text-align: center; }
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(0.97);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+    }
