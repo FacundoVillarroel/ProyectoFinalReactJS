@@ -1,0 +1,11 @@
+.header{
+    color: $whiteColor;
+    background-image: linear-gradient(to top, $blackColor, $redColor);
+    .logo{
+        max-width: 7.5rem;
+    }
+    .titulo{
+        font-family: 'Alfa Slab One', cursive;
+        font-size: 3rem;
+    }
+}

@@ -22,8 +22,9 @@ function ItemDetailContainer(){
         })
     },[itemId])
 
+    
     return(
-        <>
+        <> 
             {
                 loading 
                     ?   <h2 className='text-center my-5'>Loading...</h2> 
@@ -35,8 +36,9 @@ function ItemDetailContainer(){
                             imgSrc = {item.imgSrc}
                             description= {item.description}
                             price = {item.price}
-                            stock = {item.stock}
+                            stockTotal = {item.stockTotal}
                             category = {item.category}
+                            talles = {item.talles}
                             />
                         </div>
             }

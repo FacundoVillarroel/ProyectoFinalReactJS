@@ -11,8 +11,8 @@ export const CartProvider = ({children}) => {
         setCart( [...cart, newItem] )
     }
 
-    const isInCart = (id) => {
-        return cart.some(prod => prod.id === id)
+    const isInCart = (id,size) => {
+        return cart.some(prod => (prod.id === id && prod.size === size))
     }
     
     const emptyCart = () => {

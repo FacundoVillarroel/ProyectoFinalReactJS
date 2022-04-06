@@ -1,0 +1,47 @@
+.playerData{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-size: 1rem;
+}
+
+.playerDataContainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    column-gap: 1rem;
+}
+.yellowCard{
+    color: yellow;
+}
+.redCard{
+    color: red;
+}
+.allPlayers{
+    background-color: $blackColor;
+    color: $whiteColor;
+}
+.player{
+    background-color: $redColor;
+}
+.accordion-button{
+    background-color: $blackColor;
+        color: $whiteColor;
+    &:not(.collapsed){
+        background-color: $blackColor;
+        color: $whiteColor;
+    }
+}
+
+@for $i from 1 through 25{
+    .jugadorImagen#{$i}{
+        background-image: url(./images/jugador-#{$i}.jpg);
+        width: 5rem;
+        height: 5rem;
+        background-size: cover;
+        background-position: center;
+        margin-right: 1rem;
+        border-radius: 50%;
+        transition: transform 200ms;
+        }
+}

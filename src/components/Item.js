@@ -14,7 +14,7 @@ function Item ({item}){
             </div>
             <Link to={`/item/${item.id}`}><button className="viewDetails">Ver detalles</button></Link>
             <div className="stock mb-0">
-                <p className="mb-0">Stock disponible: {item.stock}</p>
+                <p className="mb-0">Stock disponible: {item.stockTotal}</p>
             </div>
         </div>
     ): null

@@ -1,7 +1,9 @@
 @import "variables";
 @import "mixins";
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
-
+@import "jugadores";
+@import "footer";
+@import "header";
 * {
     margin: 0px;
     padding: 0px;
@@ -12,17 +14,7 @@
     font-size: 62.5%; 
     background-color: $blackColor;
     color: $whiteColor;
-    .header{
-        color: $whiteColor;
-        background-image: linear-gradient(to top, $blackColor, $redColor);
-        .logo{
-            max-width: 7.5rem;
-        }
-        .titulo{
-            font-family: 'Alfa Slab One', cursive;
-            font-size: 3rem;
-        }
-    }
+    
     
     a{
         text-decoration: none;
@@ -149,47 +141,6 @@
     }
 }
 
-.footerContainer {
-    margin-top: 3rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-    background-image: linear-gradient(to top, $redColor, $blackColor);
-    .icons {
-        font-size: 3rem;
-        color: $whiteColor;
-        padding-right: 1rem;
-        &:hover{
-            color: $blackColor;
-        }
-    }
-    .imgFooterCampa {
-        min-width: 7rem;
-        min-height: 6.5rem;
-        background-image: url(./images/campa.png);
-        &:hover{
-            background-image: url(./images/campaNegro.png);
-        }
-    }
-    .sponsorFlex{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .imgFooterKappa{
-            margin-top: 1rem;
-            width: 6.5rem;
-            height: 3.5rem;
-            background-image: url(./images/kappa.png);
-            &:hover{
-                background-image: url(./images/kappaNegro.png);
-            }
-        }
-    }    
-}
-
-
 
 .buttonReturn{
     @include buttons (700,1rem,$blackColor,$whiteColor,$whiteColor,$whiteColor,$whiteColor,$blackColor);
@@ -221,54 +172,6 @@
     background-color: $greenColor;
     color: $whiteColor;
     }
-}
-
-.playerData{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    font-size: 1rem;
-}
-
-.playerDataContainer{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    column-gap: 1rem;
-}
-.yellowCard{
-    color: yellow;
-}
-.redCard{
-    color: red;
-}
-.allPlayers{
-    background-color: $blackColor;
-    color: $whiteColor;
-}
-.player{
-    background-color: $redColor;
-}
-.accordion-button{
-    background-color: $blackColor;
-        color: $whiteColor;
-    &:not(.collapsed){
-        background-color: $blackColor;
-        color: $whiteColor;
-    }
-}
-
-@for $i from 1 through 25{
-    .jugadorImagen#{$i}{
-        background-image: url(./images/jugador-#{$i}.jpg);
-        width: 5rem;
-        height: 5rem;
-        background-size: cover;
-        background-position: center;
-        margin-right: 1rem;
-        border-radius: 50%;
-        transition: transform 200ms;
-        }
 }
 
 .warning{

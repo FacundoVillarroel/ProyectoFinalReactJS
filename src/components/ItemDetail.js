@@ -1,6 +1,6 @@
 import ItemCount from "./ItemCount"
 import { useNavigate } from "react-router-dom"
-import { useState, useContext } from "react";
+import { useState, useContext} from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import SelectSize from "./SelectSize";
@@ -13,16 +13,28 @@ const sizeOptions = [
     {value: 'XS', text: 'XS'},
 ]
 
-const ItemDetail = ({id,title,imgSrc,description,price,stock,category}) => {
+const ItemDetail = ({id,title,imgSrc,description,price,stockTotal,category,talles}) => {
     const {addItemToCart,isInCart} = useContext(CartContext)
     const [quantity,setQuantity] = useState(1);
     const [size,setSize] = useState("")
+    var newStock = ""
 
     const navigate = useNavigate()
     const handleNavigate = () => {
         navigate(-1)
     }
 
+    if(typeof(talles) === "undefined"){}
+    else{
+        newStock = talles.find((talle) =>{
+            return talle.sizeName === size 
+        })
+    }
+
+    if (category === "pelota" && newStock.sizeName === ""){
+        newStock.stock = stockTotal
+    }
+    
     function addToCart (){
         const itemToAdd = {
             id,
@@ -32,7 +44,7 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock,category}) => {
             quantity,
             size
         } 
-        if (size==="" && category !== "pelota"){alert("debes elegir un talle")}
+        if (size==="" && category !== "pelota") {}
             else{
             addItemToCart(itemToAdd)
             }
@@ -54,13 +66,16 @@ const ItemDetail = ({id,title,imgSrc,description,price,stock,category}) => {
                 {   category !== "pelota" && <SelectSize
                         sizeOptions={sizeOptions}
                         setSize={setSize}
+                        setQuantity={setQuantity}
                         />
                 }
+                
                 <div>
-                    {   isInCart(id)
-                            ? <Link to= "/cart" className="AddToCartButton"> Ir al carrito</Link>
-                            :<ItemCount
-                            stock = {stock}
+                    {   isInCart(id,size)
+                            ?  <><p style={{color:"green"}}> Este producto ya está en tu carrito</p>
+                                <Link to= "/cart" className="AddToCartButton"> Ir al carrito</Link></>
+                            : <ItemCount 
+                            stock = {newStock.stock}
                             setQuantity = {setQuantity}
                             quantity = {quantity}
                             addToCart = {addToCart}

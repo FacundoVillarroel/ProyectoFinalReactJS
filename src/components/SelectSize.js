@@ -1,8 +1,9 @@
 
-const SelectSize = ({sizeOptions = [], setSize}) => {
+const SelectSize = ({sizeOptions = [], setSize, setQuantity}) => {
 
     const handleSelect = (e) => {
         setSize(e.target.value)
+        setQuantity(0)
     }
 
     return (
