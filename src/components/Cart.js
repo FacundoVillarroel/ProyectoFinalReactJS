@@ -42,7 +42,7 @@ function Cart () {
                 <div key={item.id}className="row productInCart justify-content-start">
                     <h3 className="col-3 text-start">{item.title}</h3>
                     <div className="col-3">
-                        <img src={item.imgSrc} className="productImage" alt="item.title"></img>
+                        <Link to={`/item/${item.id}`}><img src={item.imgSrc} className="productImage" alt="item.title"></img></Link>
                     </div>
                     <h4 className="col-2">{item.price}</h4>
                     <h5 className="col-2">{item.quantity}</h5>

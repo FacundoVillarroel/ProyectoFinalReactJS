@@ -1,7 +1,9 @@
 import ItemList from "./ItemList.js"
-import React, { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom"
-import { getProducts } from "../helper/getProducts.js";
+import React, {useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
+import {collection, getDocs, query, where} from "firebase/firestore"
+import {db} from "../firebase/config"
+
 
 function ItemListContainer(){
     const [productsList,setProductList] = useState([])
@@ -11,20 +13,20 @@ function ItemListContainer(){
     useEffect(()=> {
         setLoading(true)
 
-        getProducts()
-            .then ((response) =>{
-                if (categoryId) {
-                    setProductList( response.filter( (prod) => prod.category === categoryId ) )
-                } else {
-                    setProductList( response )
-                }
+        // 1.- armar la referencia
+        const productsRef = collection(db, "Products")
+        const q = categoryId ? query (productsRef,where("category","==", categoryId)): productsRef
+
+        //2.- llamar (async) aesa referencia
+        getDocs(q)
+            .then(resp=> {
+                const items = resp.docs.map((doc)=> ({id2: doc.id, ...doc.data()}))
+                setProductList(items)
             })
-            .catch((err) => {
-                console.log(err)
-            })
-            .finally(() => {
+            .finally(()=>{
                 setLoading(false)
-        })
+            })
+        
     },[categoryId])
 
     return(
