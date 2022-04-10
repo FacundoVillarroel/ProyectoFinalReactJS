@@ -20,7 +20,7 @@ function ItemListContainer(){
         //2.- llamar (async) aesa referencia
         getDocs(q)
             .then(resp=> {
-                const items = resp.docs.map((doc)=> ({id2: doc.id, ...doc.data()}))
+                const items = resp.docs.map((doc)=> ({id: doc.id, ...doc.data()}))
                 setProductList(items)
             })
             .finally(()=>{
@@ -33,7 +33,7 @@ function ItemListContainer(){
         <>
             {
                 loading 
-                    ? <h2 className="text-center my-5">Loading...</h2> 
+                    ? <h2 className="text-center my-5">Cargando...</h2> 
                     :   <div className="main container pb-3">
                             <h2 className= "text-center m-5">Bienvenido/a a la tienda de Recreativo</h2>
                             <ItemList products={productsList}/>

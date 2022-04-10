@@ -23,8 +23,8 @@ export const CartProvider = ({children}) => {
         return cart.reduce((acc, prod) => acc += prod.quantity, 0)
     }
 
-    const removeItem = (id) => {
-        setCart( cart.filter((prod) => prod.id !== id) )
+    const removeItem = (id,size) => {
+        setCart( cart.filter((prod) => !(prod.id === id && prod.size === size)) )
     }
     
     const totalPrice = () => {
