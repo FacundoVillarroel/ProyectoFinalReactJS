@@ -1,4 +1,4 @@
-import dates from "../data/fixtureDates"
+import dates from "../../data/fixtureDates"
 import FixtureDate from "./FixtureDate";
 
 function FixtureContainer () {

@@ -1,15 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from "./components/NavBar";
-import Header from './components/Header';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import NavBar from "./components//navBar/NavBar";
+import Header from './components/header/Header';
+import ItemListContainer from './components/tienda/ItemListContainer';
+import ItemDetailContainer from './components/tienda/ItemDetailContainer';
 import {BrowserRouter,Routes, Route, Navigate} from "react-router-dom"
-import Footer from './components/Footer';
-import Cart from './components/Cart';
+import Footer from './components/footer/Footer';
+import Cart from './components/tienda/Cart';
 import { CartProvider } from './context/CartContext';
-import PlayersContainer from './components/playersContainer';
-import HomeContainer from './components/HomeContainer';
-import FixtureContainer from './components/FixtureContainer';
+import PlayersContainer from './components/jugadores/playersContainer';
+import HomeContainer from './components//home/HomeContainer';
+import FixtureContainer from './components/fixture/FixtureContainer';
+import GolesContainer from './components/goles/GolesContainer';
+import NosotrosContainer from './components/nosotros/NosotrosContainer';
 import './App.css';
 
 
@@ -28,11 +30,13 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeContainer/>}/>
             <Route path="/fixture" element={<FixtureContainer/>}/>
+            <Route path="/goles" element={<GolesContainer/>}/>
+            <Route path='/jugadores' element={<PlayersContainer/>}/>
+            <Route path='/nosotros' element={<NosotrosContainer/>}/>
             <Route path="/tienda" element={<ItemListContainer/>} />
             <Route path="/category/:categoryId" element={<ItemListContainer/>} />
             <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
             <Route path='/cart' element= {<Cart/>} />
-            <Route path='/jugadores' element={<PlayersContainer/>}/>
             <Route path="*" element={ <Navigate to="/tienda"/>}/> 
           </Routes>
           

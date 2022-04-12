@@ -1,7 +1,7 @@
 import ItemCount from "./ItemCount"
 import { useNavigate } from "react-router-dom"
 import { useState, useContext} from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import SelectSize from "./SelectSize";
 

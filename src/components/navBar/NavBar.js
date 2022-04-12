@@ -1,8 +1,8 @@
 import {Navbar,Container,Nav, NavDropdown} from "react-bootstrap"
-import CartWidget from "./CartWidget";
+import CartWidget from "../tienda/CartWidget";
 import { Link } from "react-router-dom"
 import { useState,useContext } from "react";
-import {CartContext} from "../context/CartContext"
+import {CartContext} from "../../context/CartContext"
 
 function NavBar() {
     const {cartQuantity} = useContext(CartContext)
@@ -13,6 +13,7 @@ const [activeGoles,setActiveGoles] = useState(false)
 const [activeJugadores,setActiveJugadores] = useState(false)
 const [activeNosotros,setActiveNosotros] = useState(false)
 const [activeTienda,setActiveTienda] = useState(false)
+
     function handleClickHome(){
         setActiveHome(true); 
         setActiveFixture(false); setActiveGoles(false); setActiveJugadores(false); setActiveNosotros(false); setActiveTienda(false)
@@ -49,7 +50,7 @@ const [activeTienda,setActiveTienda] = useState(false)
                         <Nav.Link as={Link} to ="/goles" onClick={handleClickGoles} active={activeGoles}>Goles</Nav.Link>
                         <Nav.Link as={Link} to ="/jugadores" onClick={handleClickJugadores} active={activeJugadores}>Jugadores</Nav.Link>
                         <Nav.Link as={Link} to ="/nosotros" onClick={handleClickNosotros} active={activeNosotros}>Sobre Nosotros</Nav.Link>
-                        <Nav.Link as={Link} to ="/tienda" onClick={handleClickTienda} active={activeTienda}>Tienda De Recreativo</Nav.Link>
+                        <Nav.Link as={Link} to ="/tienda" onClick={handleClickTienda} active={activeTienda}>Tienda</Nav.Link>
                         <NavDropdown title="Categorias" >                            
                             <NavDropdown.Item as={Link} to="/category/titular" onClick={handleClickTienda}>Conjuntos Titulares</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/category/suplente" onClick={handleClickTienda}>Conjuntos Suplentes</NavDropdown.Item>

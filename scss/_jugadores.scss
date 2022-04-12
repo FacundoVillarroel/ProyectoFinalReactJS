@@ -43,7 +43,11 @@
         margin-right: 1rem;
         border-radius: 50%;
         transition: transform 200ms;
+        &:hover{
+            transform: scale(1.5,1.5);
+            cursor: pointer;
         }
+    }
 }
 
 .dropdown-menu{
@@ -52,4 +56,16 @@
     background-color: $greenColor;
     color: $whiteColor;
     }
+}
+
+
+.accordion-button::after {
+    background-image: url("../src/images/flecha.png")
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("../src/images/flecha.png")
+}
+.accordion-button:focus {
+    border-color: $redColor;
+    box-shadow: 0 0 0 0.1rem rgba(250, 70, 89, 0.6);
 }

@@ -1,6 +1,6 @@
 import {Accordion} from "react-bootstrap"
 import Player from "./player"
-import allPlayers from "../data/players"
+import allPlayers from "../../data/players"
 
 function PlayersContainer() {
     return(

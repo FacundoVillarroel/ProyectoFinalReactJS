@@ -40,6 +40,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen1:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen2 {
   background-image: url(./images/jugador-2.jpg);
@@ -50,6 +53,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen2:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen3 {
   background-image: url(./images/jugador-3.jpg);
@@ -60,6 +66,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen3:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen4 {
   background-image: url(./images/jugador-4.jpg);
@@ -70,6 +79,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen4:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen5 {
   background-image: url(./images/jugador-5.jpg);
@@ -80,6 +92,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen5:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen6 {
   background-image: url(./images/jugador-6.jpg);
@@ -90,6 +105,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen6:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen7 {
   background-image: url(./images/jugador-7.jpg);
@@ -100,6 +118,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen7:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen8 {
   background-image: url(./images/jugador-8.jpg);
@@ -110,6 +131,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen8:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen9 {
   background-image: url(./images/jugador-9.jpg);
@@ -120,6 +144,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen9:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen10 {
   background-image: url(./images/jugador-10.jpg);
@@ -130,6 +157,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen10:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen11 {
   background-image: url(./images/jugador-11.jpg);
@@ -140,6 +170,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen11:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen12 {
   background-image: url(./images/jugador-12.jpg);
@@ -150,6 +183,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen12:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen13 {
   background-image: url(./images/jugador-13.jpg);
@@ -160,6 +196,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen13:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen14 {
   background-image: url(./images/jugador-14.jpg);
@@ -170,6 +209,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen14:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen15 {
   background-image: url(./images/jugador-15.jpg);
@@ -180,6 +222,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen15:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen16 {
   background-image: url(./images/jugador-16.jpg);
@@ -190,6 +235,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen16:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen17 {
   background-image: url(./images/jugador-17.jpg);
@@ -200,6 +248,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen17:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen18 {
   background-image: url(./images/jugador-18.jpg);
@@ -210,6 +261,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen18:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen19 {
   background-image: url(./images/jugador-19.jpg);
@@ -220,6 +274,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen19:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen20 {
   background-image: url(./images/jugador-20.jpg);
@@ -230,6 +287,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen20:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen21 {
   background-image: url(./images/jugador-21.jpg);
@@ -240,6 +300,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen21:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen22 {
   background-image: url(./images/jugador-22.jpg);
@@ -250,6 +313,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen22:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen23 {
   background-image: url(./images/jugador-23.jpg);
@@ -260,6 +326,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen23:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen24 {
   background-image: url(./images/jugador-24.jpg);
@@ -270,6 +339,9 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen24:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .jugadorImagen25 {
   background-image: url(./images/jugador-25.jpg);
@@ -280,12 +352,25 @@
   margin-right: 1rem;
   border-radius: 50%;
   transition: transform 200ms; }
+  .jugadorImagen25:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer; }
 
 .dropdown-menu {
   background-color: #2eb872; }
   .dropdown-menu :hover {
     background-color: #2eb872;
     color: #ffffff; }
+
+.accordion-button::after {
+  background-image: url("../src/images/flecha.png"); }
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../src/images/flecha.png"); }
+
+.accordion-button:focus {
+  border-color: #fa4659;
+  box-shadow: 0 0 0 0.1rem rgba(250, 70, 89, 0.6); }
 
 .footerContainer {
   margin-top: 3rem;

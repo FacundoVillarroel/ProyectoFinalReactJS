@@ -1,6 +1,6 @@
-import reciente from "../images/reciente.jpg"
-import recreaGif from "../images/gif-recrea.gif"
-import deportivoGif from "../images/gif-deportivo.gif"
+import reciente from "../../images/reciente.jpg"
+import recreaGif from "../../images/gif-recrea.gif"
+import deportivoGif from "../../images/gif-deportivo.gif"
 function HomeContainer (){
 
     return(

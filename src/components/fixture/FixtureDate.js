@@ -1,7 +1,6 @@
 
 function FixtureDate({dates}){
 
-    console.log(dates);
     return(
         <>
             {dates.map((date)=> (
