@@ -1,0 +1,52 @@
+.fixture {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.6fr;
+    grid-template-rows: repeat(11, 1fr);
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .fixtureFecha {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "fecha fecha fecha fecha fecha" "gifLocal equipoLocal resultado equipoVisitante gifVisitante";
+        align-items: center;
+        column-gap: 5rem;
+        justify-content: center;
+        border: $whiteColor dotted 0.1rem;
+        padding: 0.5rem;
+        margin-bottom: 2rem;
+        background-image: radial-gradient($greenColor, $blackColor);
+        max-width: 70vw;
+        transition: transform 0.5s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        .fecha {
+            grid-area: fecha;
+        }
+        .gifLocal {
+            grid-area: gifLocal;
+        }
+        .equipoLocal {
+            grid-area: equipoLocal;
+        }
+        .resultado {
+            grid-area: resultado;
+        }
+        .equipoVisitante {
+            grid-area: equipoVisitante;
+        }
+        .gifVisitante {
+            grid-area: gifVisitante;
+        }
+        
+    }
+    }
+    
+    .imgEscudo {
+        max-width: 5rem;
+    }
+
