@@ -1,10 +1,27 @@
-
+import Goleadores from "./Goleadores"
+import MaximasGoleadas from "./MaximasGoleadas"
+import Penales from "./Penales"
+import Dobletes from "./Dobletes"
+import Hattricks from "./Hattricks"
+import Poker from "./Poker"
 
 function GolesContainer(){
     return(
-        <div className="text-center my-5">
-            <h2>Sección todavía no desarrollada</h2>
-        </div>
+        <section className="gridPadreGoles">
+
+            <Goleadores/>
+
+            <MaximasGoleadas/>
+
+            <Penales/>
+
+            <Dobletes/>
+
+            <Hattricks/>
+
+            <Poker/>
+
+        </section>
     )
 }
 export default GolesContainer

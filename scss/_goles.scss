@@ -1,0 +1,45 @@
+.gridPadreGoles {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    grid-row: repeat(2, auto);
+    grid-template-areas: "goleadores maximasGoleadas penales" "dobletes hattricks poker";
+    padding: 2rem 1rem;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+    justify-items: center;
+    text-align: center;
+    row-gap: 2rem;
+    font-size: 1rem;
+    .goleadores {
+        grid-area: goleadores;
+    }
+    .primerGol {
+        grid-area: primerGol;
+    }
+    .maximasGoleadas {
+        grid-area: maximasGoleadas;
+        .aFavor {
+            color: green;
+            text-shadow: 1px 1px black;
+            text-align: center;
+        }
+        
+        .enContra {
+            color: $redColor;
+            text-shadow: 1px 1px black;
+            text-align: center;
+        }
+    }
+    .penales {
+        grid-area: penales;
+    }
+    .dobletes {
+        grid-area: dobletes;
+    }
+    .hattricks {
+        grid-area: hattricks;
+    }
+    .poker {
+        grid-area: poker;
+    }
+}
