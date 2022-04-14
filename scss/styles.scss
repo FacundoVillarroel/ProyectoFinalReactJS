@@ -1,242 +1,16 @@
 @import "variables";
 @import "mixins";
+@import "structure";
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import "navBar";
+@import "home";
 @import "jugadores";
 @import "footer";
 @import "header";
 @import "fixture";
 @import "goles";
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box; }
-
-.body {
-    
-    font-size: 62.5%; 
-    background-color: $blackColor;
-    color: $whiteColor;
-    
-    
-    a{
-        text-decoration: none;
-        color: $blackColor;
-        font-size: 1.7rem;
-    }
-
-    .navBar{
-        height: 3rem;
-        font-weight: 500;
-        background-color: $greenColor;
-        .me-auto{
-            width: 100%;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        .bg-NavBar{
-            background-color:$greenColor;
-        }
-        .nav-link{
-            color: $blackColor;
-            &:hover{
-                color: $whiteColor !important;
-            }
-        }
-        .active{
-            color: $whiteColor !important;
-        }
-    }
-    
-    .itemCount{
-        background-color: $greenColor;
-        width: 16rem;
-        border-radius: 2rem;
-        .quantityButtonContainer{
-            width: 8rem;
-            border: $greenColor solid 0.1rem;
-            .quantityButton{
-                border-radius: 0.3rem;
-                height: 1.3rem;
-                width: 1.3rem;
-                margin: 0.5rem 0rem;
-            }
-        }
-    }
-    
-    .productList{
-        justify-content: center;
-        .product{
-            width: 20rem;
-            border: $greenColor solid 0.3rem;
-            border-radius: 1.7rem;
-            box-shadow: 0px 0px 3px 3px rgba(46, 184, 114, 0.7);
-            margin: 1.5rem;
-            .productName{
-                width: 101%;
-                height: 2.8rem;
-                border-top-left-radius: 1.3rem;
-                border-top-right-radius: 1.3rem;
-                color: $whiteColor;
-                background-color: $greenColor;
-                border-bottom: $greenColor solid 0.1rem;
-                font-size: 1.5rem;
-                text-align: center;
-            }
-            .productPrice{
-                font-size: 1rem;
-            }
-            .viewDetails{
-                @include buttons (700,1rem,$blackColor,$whiteColor,$whiteColor,$whiteColor,$greenColor,$greenColor);
-                margin: 1rem;
-                padding: 0.4rem 0.8rem;
-                width: 8rem;
-            }
-            .stock{
-                width: 100%;
-                border-bottom-left-radius: 3rem;
-                border-bottom-right-radius: 3rem;
-                background-color: $greenColor;
-                text-align: center;
-            }
-        }
-    }
-}
-
-.productImage{
-    max-width: 18rem;
-    height: 10rem;
-    border-radius: 2rem;
-    }
-
-.itemDetailContainer{
-    margin: 1rem;
-    .itemDetail{
-        width: fit-content;
-        border-radius: 2rem;
-        box-shadow: 0px 0px 2px 2px rgba(250, 70, 89, 0.7);
-        .selectSize{
-            font-size: 1rem;
-        }
-        .buttonReturn{
-            @include buttons (700,1rem,$blackColor,$whiteColor,$whiteColor,$whiteColor,$whiteColor,$blackColor);
-            margin: 1rem;
-            padding: 0.4rem 0.8rem;
-        }
-        .AddToCartButton{
-            margin-bottom: 0.5rem;
-                padding: 0.4rem 0.8rem;
-                font-weight: 700;
-                font-size: 1rem;
-                width: 15rem;
-                border-color:$whiteColor;
-                background-color: $whiteColor;
-                border-radius: 0.5rem;
-                &[disabled]:hover{
-                    color: #10103d4d;
-                }
-                &:hover{
-                    color: $greenColor;  
-                    background-color: $whiteColor;
-                    transition: 300ms linear;
-                }
-        }
-    }
-}
-
-
-.buttonReturn{
-    @include buttons (700,1rem,$blackColor,$whiteColor,$whiteColor,$whiteColor,$whiteColor,$blackColor);
-    margin: 1rem;
-    padding: 0.4rem 0.8rem;
-}
-
-.productInCart{
-    margin: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 0.1rem solid $redColor;
-    align-items: center;
-}
-
-.buttonDeleteItem{
-    @include buttons(700,1rem,$redColor,$redColor,$whiteColor,$whiteColor,$whiteColor,$redColor);
-    padding: 0.4rem;
-}
-
-.buttonPay{
-    @include buttons(700,1rem,$greenColor,$greenColor,$whiteColor,$whiteColor,$whiteColor,$greenColor);
-    padding: 0.4rem;
-    
-}
-
-.warning{
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: $redColor;
-    margin-bottom: 0;
-}
-
-
-/* Home  --In process*/
-
-.bordeRedondeado {
-    width: 100%;
-    border-radius: 10%;
-}
-
-.titular {
-    font-weight: 600;
-    padding-bottom: 1rem;
-    text-align: center; }
-
-
-th {
-    border: 0.1rem solid $blackColor;
-    padding: 0.5rem;
-    text-align: center; }
-
-td {
-    border: 0.1rem solid $blackColor;
-    padding: 0.5rem;
-    text-align: start; }
-
-.fondo {
-    background-color: #2eb872;
-    border: solid #212121 0.1rem; }
-
-.proximoPartido {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: outset 0.2rem;
-    background-image: url(../src/images/pastoSintetico.jpg);
-    animation-name: zoom;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-    animation-delay: 0s;
-    a{
-        text-decoration: none;
-        color: $whiteColor;
-        .titularSecundario:hover{
-        transition: font-size 0.5s;
-        font-size: 2.5rem;
-        }
-    }
-}
-.imgEscudo{
-    max-width: 5rem;
-}
-.vs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.titularSecundario {
-    padding-top: 2rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
-    text-align: center; }
+@import "nosotros";
+@import "tienda";
 
 @keyframes zoom {
     0% {
@@ -250,4 +24,10 @@ td {
     100% {
         transform: scale(1);
     }
-    }
+}
+
+
+
+
+
+

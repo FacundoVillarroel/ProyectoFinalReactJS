@@ -1,4 +1,136 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+.body {
+  font-size: 62.5%;
+  background-color: #212121;
+  color: #ffffff; }
+  .body a {
+    text-decoration: none;
+    color: #212121;
+    font-size: 1.7rem; }
+
+.bordeRedondeado {
+  width: 100%;
+  border-radius: 10%; }
+
+.titular {
+  font-weight: 600;
+  padding-bottom: 1rem;
+  text-align: center; }
+
+.titularSecundario {
+  padding-top: 2rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  text-align: center; }
+
+th {
+  border: 0.1rem solid #212121;
+  padding: 0.5rem;
+  text-align: center; }
+
+td {
+  border: 0.1rem solid #212121;
+  padding: 0.5rem;
+  text-align: start; }
+
+.fondo {
+  background-color: #2eb872;
+  border: solid #212121 0.1rem; }
+
+.buttonReturn {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #212121;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 1rem;
+  padding: 0.4rem 0.8rem; }
+  .buttonReturn:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: #212121;
+    transition: 300ms linear; }
+
+.buttonDeleteItem {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fa4659;
+  border-color: #fa4659;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.4rem; }
+  .buttonDeleteItem:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: #fa4659;
+    transition: 300ms linear; }
+
+.buttonPay {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #2eb872;
+  border-color: #2eb872;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.4rem; }
+  .buttonPay:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: #2eb872;
+    transition: 300ms linear; }
+
+.body .navBar {
+  height: 3rem;
+  font-weight: 500;
+  background-color: #2eb872; }
+  .body .navBar .me-auto {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center; }
+  .body .navBar .bg-NavBar {
+    background-color: #2eb872; }
+  .body .navBar .nav-link {
+    color: #212121; }
+    .body .navBar .nav-link:hover {
+      color: #ffffff !important; }
+  .body .navBar .active {
+    color: #ffffff !important; }
+
+.proximoPartido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: outset 0.2rem;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/projectofinalreactjs.appspot.com/o/pastoSintetico.jpg?alt=media&token=6f557d0d-e1e6-4e65-8cce-765fa0eb0db4);
+  animation-name: zoom;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-delay: 0s; }
+  .proximoPartido a {
+    text-decoration: none;
+    color: #ffffff; }
+    .proximoPartido a .titularSecundario:hover {
+      transition: font-size 0.5s;
+      font-size: 2.5rem; }
+
+.imgEscudo {
+  max-width: 5rem; }
+
+.vs {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .playerData {
   display: flex;
   flex-direction: column;
@@ -389,9 +521,9 @@
   .footerContainer .imgFooterCampa {
     min-width: 7rem;
     min-height: 6.5rem;
-    background-image: url(./images/campa.png); }
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/projectofinalreactjs.appspot.com/o/campa.png?alt=media&token=868f5a51-f8ae-44e1-ab89-f4e21e46d6af); }
     .footerContainer .imgFooterCampa:hover {
-      background-image: url(./images/campaNegro.png); }
+      background-image: url(https://firebasestorage.googleapis.com/v0/b/projectofinalreactjs.appspot.com/o/campaNegro.png?alt=media&token=72ec7a9a-489e-4b6c-a6d1-7dbe4badca09); }
   .footerContainer .sponsorFlex {
     display: flex;
     flex-direction: column;
@@ -400,9 +532,9 @@
       margin-top: 1rem;
       width: 6.5rem;
       height: 3.5rem;
-      background-image: url(./images/kappa.png); }
+      background-image: url(https://firebasestorage.googleapis.com/v0/b/projectofinalreactjs.appspot.com/o/kappa.png?alt=media&token=b4d282a7-e080-46a4-8bb4-3b5f078d28fd); }
       .footerContainer .sponsorFlex .imgFooterKappa:hover {
-        background-image: url(./images/kappaNegro.png); }
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/projectofinalreactjs.appspot.com/o/kappaNegro.png?alt=media&token=2eaa8105-4935-48e6-b891-1edbbef64606); }
 
 .header {
   color: #ffffff;
@@ -489,89 +621,130 @@
   .gridPadreGoles .poker {
     grid-area: poker; }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box; }
-
-.body {
-  font-size: 62.5%;
-  background-color: #212121;
-  color: #ffffff; }
-  .body a {
-    text-decoration: none;
-    color: #212121;
-    font-size: 1.7rem; }
-  .body .navBar {
-    height: 3rem;
-    font-weight: 500;
-    background-color: #2eb872; }
-    .body .navBar .me-auto {
+.gridPadreNosotros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 3rem;
+  justify-items: center; }
+  .gridPadreNosotros .information {
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: rgba(46, 184, 114, 0.5);
+    margin: 1rem; }
+  .gridPadreNosotros .gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 1rem;
+    row-gap: 1rem; }
+    .gridPadreNosotros .gridGaleria .animacionGaleria {
+      transition: transform 0.5s; }
+      .gridPadreNosotros .gridGaleria .animacionGaleria:hover {
+        transform: scale(1.1);
+        cursor: pointer; }
+  .gridPadreNosotros form {
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    background-color: #fa4659; }
+    .gridPadreNosotros form .label {
+      width: fit-content;
+      padding-right: 1.6rem;
+      font-weight: bold;
+      display: inline-block; }
+    .gridPadreNosotros form .input {
+      width: 18rem;
+      margin: 1rem 0.2rem;
+      display: inline-block; }
+    .gridPadreNosotros form .enviar {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #212121;
+      border-color: #ffffff;
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      cursor: pointer;
       width: 100%;
-      justify-content: space-evenly;
-      align-items: center; }
-    .body .navBar .bg-NavBar {
-      background-color: #2eb872; }
-    .body .navBar .nav-link {
-      color: #212121; }
-      .body .navBar .nav-link:hover {
-        color: #ffffff !important; }
-    .body .navBar .active {
-      color: #ffffff !important; }
-  .body .itemCount {
-    background-color: #2eb872;
-    width: 16rem;
-    border-radius: 2rem; }
-    .body .itemCount .quantityButtonContainer {
-      width: 8rem;
-      border: #2eb872 solid 0.1rem; }
-      .body .itemCount .quantityButtonContainer .quantityButton {
-        border-radius: 0.3rem;
-        height: 1.3rem;
-        width: 1.3rem;
-        margin: 0.5rem 0rem; }
-  .body .productList {
-    justify-content: center; }
-    .body .productList .product {
-      width: 20rem;
-      border: #2eb872 solid 0.3rem;
-      border-radius: 1.7rem;
-      box-shadow: 0px 0px 3px 3px rgba(46, 184, 114, 0.7);
-      margin: 1.5rem; }
-      .body .productList .product .productName {
-        width: 101%;
-        height: 2.8rem;
-        border-top-left-radius: 1.3rem;
-        border-top-right-radius: 1.3rem;
+      padding: 0.8rem 11.6rem;
+      margin-top: 3.2rem;
+      display: block; }
+      .gridPadreNosotros form .enviar:hover {
         color: #ffffff;
-        background-color: #2eb872;
-        border-bottom: #2eb872 solid 0.1rem;
-        font-size: 1.5rem;
-        text-align: center; }
-      .body .productList .product .productPrice {
-        font-size: 1rem; }
-      .body .productList .product .viewDetails {
-        font-weight: 700;
-        font-size: 1rem;
-        color: #212121;
         border-color: #ffffff;
-        background-color: #ffffff;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        margin: 1rem;
-        padding: 0.4rem 0.8rem;
-        width: 8rem; }
-        .body .productList .product .viewDetails:hover {
-          color: #ffffff;
-          border-color: #2eb872;
-          background-color: #2eb872;
-          transition: 300ms linear; }
-      .body .productList .product .stock {
-        width: 100%;
-        border-bottom-left-radius: 3rem;
-        border-bottom-right-radius: 3rem;
+        background-color: #212121;
+        transition: 300ms linear; }
+    .gridPadreNosotros form .cursor:hover {
+      cursor: pointer; }
+    .gridPadreNosotros form textarea {
+      width: 100%;
+      height: 10rem;
+      border: 0.2rem solid #ffffff;
+      border-radius: 0.5rem;
+      background-color: #ffffff;
+      margin: 0.8rem 0rem;
+      resize: none;
+      display: block; }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(33, 33, 33, 0.5);
+  border-radius: 40%; }
+
+.itemCount {
+  background-color: #2eb872;
+  width: 16rem;
+  border-radius: 2rem; }
+  .itemCount .quantityButtonContainer {
+    width: 8rem;
+    border: #2eb872 solid 0.1rem; }
+    .itemCount .quantityButtonContainer .quantityButton {
+      border-radius: 0.3rem;
+      height: 1.3rem;
+      width: 1.3rem;
+      margin: 0.5rem 0rem; }
+
+.productList {
+  justify-content: center; }
+  .productList .product {
+    width: 20rem;
+    border: #2eb872 solid 0.3rem;
+    border-radius: 1.7rem;
+    box-shadow: 0px 0px 3px 3px rgba(46, 184, 114, 0.7);
+    margin: 1.5rem; }
+    .productList .product .productName {
+      width: 101%;
+      height: 2.8rem;
+      border-top-left-radius: 1.3rem;
+      border-top-right-radius: 1.3rem;
+      color: #ffffff;
+      background-color: #2eb872;
+      border-bottom: #2eb872 solid 0.1rem;
+      font-size: 1.5rem;
+      text-align: center; }
+    .productList .product .productPrice {
+      font-size: 1rem; }
+    .productList .product .viewDetails {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #212121;
+      border-color: #ffffff;
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin: 1rem;
+      padding: 0.4rem 0.8rem;
+      width: 8rem; }
+      .productList .product .viewDetails:hover {
+        color: #ffffff;
+        border-color: #2eb872;
         background-color: #2eb872;
-        text-align: center; }
+        transition: 300ms linear; }
+    .productList .product .stock {
+      width: 100%;
+      border-bottom-left-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+      background-color: #2eb872;
+      text-align: center; }
 
 .productImage {
   max-width: 18rem;
@@ -586,21 +759,6 @@
     box-shadow: 0px 0px 2px 2px rgba(250, 70, 89, 0.7); }
     .itemDetailContainer .itemDetail .selectSize {
       font-size: 1rem; }
-    .itemDetailContainer .itemDetail .buttonReturn {
-      font-weight: 700;
-      font-size: 1rem;
-      color: #212121;
-      border-color: #ffffff;
-      background-color: #ffffff;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin: 1rem;
-      padding: 0.4rem 0.8rem; }
-      .itemDetailContainer .itemDetail .buttonReturn:hover {
-        color: #ffffff;
-        border-color: #ffffff;
-        background-color: #212121;
-        transition: 300ms linear; }
     .itemDetailContainer .itemDetail .AddToCartButton {
       margin-bottom: 0.5rem;
       padding: 0.4rem 0.8rem;
@@ -617,119 +775,17 @@
         background-color: #ffffff;
         transition: 300ms linear; }
 
-.buttonReturn {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #212121;
-  border-color: #ffffff;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  margin: 1rem;
-  padding: 0.4rem 0.8rem; }
-  .buttonReturn:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-    background-color: #212121;
-    transition: 300ms linear; }
-
 .productInCart {
   margin: 2rem;
   padding-bottom: 2rem;
   border-bottom: 0.1rem solid #fa4659;
   align-items: center; }
 
-.buttonDeleteItem {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #fa4659;
-  border-color: #fa4659;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  padding: 0.4rem; }
-  .buttonDeleteItem:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-    background-color: #fa4659;
-    transition: 300ms linear; }
-
-.buttonPay {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #2eb872;
-  border-color: #2eb872;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  padding: 0.4rem; }
-  .buttonPay:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-    background-color: #2eb872;
-    transition: 300ms linear; }
-
 .warning {
   font-size: 0.7rem;
   font-weight: 600;
   color: #fa4659;
   margin-bottom: 0; }
-
-/* Home  --In process*/
-.bordeRedondeado {
-  width: 100%;
-  border-radius: 10%; }
-
-.titular {
-  font-weight: 600;
-  padding-bottom: 1rem;
-  text-align: center; }
-
-th {
-  border: 0.1rem solid #212121;
-  padding: 0.5rem;
-  text-align: center; }
-
-td {
-  border: 0.1rem solid #212121;
-  padding: 0.5rem;
-  text-align: start; }
-
-.fondo {
-  background-color: #2eb872;
-  border: solid #212121 0.1rem; }
-
-.proximoPartido {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: outset 0.2rem;
-  background-image: url(../src/images/pastoSintetico.jpg);
-  animation-name: zoom;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-delay: 0s; }
-  .proximoPartido a {
-    text-decoration: none;
-    color: #ffffff; }
-    .proximoPartido a .titularSecundario:hover {
-      transition: font-size 0.5s;
-      font-size: 2.5rem; }
-
-.imgEscudo {
-  max-width: 5rem; }
-
-.vs {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.titularSecundario {
-  padding-top: 2rem;
-  font-weight: 400;
-  padding-bottom: 1rem;
-  text-align: center; }
 
 @keyframes zoom {
   0% {

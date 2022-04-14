@@ -1,10 +1,10 @@
-import reciente from "../../images/reciente.jpg"
 
 function MostRecent () {
     return(
         <>
             <div className="col-6 text-center my-3">
-                <h2 className="titular mt-5 mb-3">Lo más reciente</h2><img src={reciente} alt="Tomas Albarello manteniendo la posesión para Recreativo" className="bordeRedondeado"/>
+                <h2 className="titular mt-5 mb-3">Lo más reciente</h2>
+                <img src={"https://firebasestorage.googleapis.com/v0/b/projectofinalreactjs.appspot.com/o/reciente.jpg?alt=media&token=2d8c88ed-6cff-42df-9660-f64b0f4468f5"} alt="Tomas Albarello manteniendo la posesión para Recreativo" className="bordeRedondeado"/>
                 </div>
                 <div className="col-2 my-5">
                 <h2 className="titular">Recreativo cayó 2 por 0</h2>

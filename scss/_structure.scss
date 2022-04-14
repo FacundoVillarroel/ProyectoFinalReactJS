@@ -1,0 +1,68 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; }
+
+.body {
+    
+    font-size: 62.5%; 
+    background-color: $blackColor;
+    color: $whiteColor;
+    
+    
+    a{
+        text-decoration: none;
+        color: $blackColor;
+        font-size: 1.7rem;
+    }
+}
+
+.bordeRedondeado {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.titular {
+    font-weight: 600;
+    padding-bottom: 1rem;
+    text-align: center; }
+
+.titularSecundario {
+    padding-top: 2rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    text-align: center; 
+}
+
+th {
+    border: 0.1rem solid $blackColor;
+    padding: 0.5rem;
+    text-align: center; }
+
+td {
+    border: 0.1rem solid $blackColor;
+    padding: 0.5rem;
+    text-align: start; }
+
+.fondo {
+    background-color: #2eb872;
+    border: solid #212121 0.1rem; }
+
+
+.buttonReturn{
+    @include buttons (700,1rem,$blackColor,$whiteColor,$whiteColor,$whiteColor,$whiteColor,$blackColor);
+    margin: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.buttonDeleteItem{
+    @include buttons(700,1rem,$redColor,$redColor,$whiteColor,$whiteColor,$whiteColor,$redColor);
+    padding: 0.4rem;
+}
+
+.buttonPay{
+    @include buttons(700,1rem,$greenColor,$greenColor,$whiteColor,$whiteColor,$whiteColor,$greenColor);
+    padding: 0.4rem;
+    
+}
+
