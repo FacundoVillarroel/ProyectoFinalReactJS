@@ -12,7 +12,7 @@ export const CartProvider = ({children}) => {
     }
 
     const isInCart = (id,size) => {
-        return cart.some(prod => (prod.id === id && prod.size === size))
+        return cart.some(product => (product.id === id && product.size === size))
     }
     
     const emptyCart = () => {
@@ -20,15 +20,15 @@ export const CartProvider = ({children}) => {
     }
 
     const cartQuantity = () => {
-        return cart.reduce((acc, prod) => acc += prod.quantity, 0)
+        return cart.reduce((accum, product) => accum += product.quantity, 0)
     }
 
     const removeItem = (id,size) => {
-        setCart( cart.filter((prod) => !(prod.id === id && prod.size === size)) )
+        setCart( cart.filter((product) => !(product.id === id && product.size === size)) )
     }
     
     const totalPrice = () => {
-        return cart.reduce((acc, prod) => acc += prod.price * prod.quantity, 0)
+        return cart.reduce((accum, product) => accum += product.price * product.quantity, 0)
     }
 
     return(

@@ -20,8 +20,9 @@ function ItemCount ({stock,setQuantity,quantity,addToCart,category,size}){
             </div>
             <button className="AddToCartButton" onClick={addToCart} disabled={quantity===0 || (size ==="" && category !== "pelota")}>
                 Agregar al carrito<span><BsFillCartPlusFill/></span>
-                {stock === 0 ? <p className="warning"> ¡Lo sentimos, no queda Stock de este producto!</p>
-                :<>{(size === "" && category !== "pelota") && <p className="warning"> ¡Debes elegir un talle!</p>}</>}
+                {stock === 0 
+                    ? <p className="warning"> ¡Lo sentimos, no queda Stock de este producto!</p>
+                    :<>{(size === "" && category !== "pelota") && <p className="warning"> ¡Debes elegir un talle!</p>}</>}
             </button>     
             
             <p>Stock disponible: {stock}</p>

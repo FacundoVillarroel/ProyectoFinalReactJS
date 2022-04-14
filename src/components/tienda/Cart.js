@@ -6,13 +6,6 @@ import { Link } from "react-router-dom"
 function Cart () {
     const {cart,emptyCart,removeItem,totalPrice} = useContext(CartContext)
 
-    
-    const haddlePay = ()=>{
-        alert("gracias por su compra")
-        emptyCart()
-    }
-    
-
     return(
         
         <>
@@ -57,7 +50,7 @@ function Cart () {
                     
                     <div>
                         <button className="buttonDeleteItem m-5" onClick={emptyCart}> Vaciar Carrito</button>
-                        <button className="buttonPay m-5" onClick={haddlePay}> Terminar compra </button>
+                        <Link to="/checkout"><button className="buttonPay m-5"> Terminar compra </button></Link>
                     </div>
                     <Link to="/tienda">
                         <button className="buttonReturn"> Continuar comprando </button>

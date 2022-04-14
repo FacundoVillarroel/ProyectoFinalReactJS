@@ -17,7 +17,7 @@ const ItemDetail = ({id,title,imgSrc,description,price,stockTotal,category,talle
     const {addItemToCart,isInCart} = useContext(CartContext)
     const [quantity,setQuantity] = useState(1);
     const [size,setSize] = useState("")
-    var newStock = ""
+    var newStock = {}
 
     const navigate = useNavigate()
     const handleNavigate = () => {

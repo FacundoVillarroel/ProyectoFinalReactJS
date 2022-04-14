@@ -13,11 +13,9 @@ function ItemListContainer(){
     useEffect(()=> {
         setLoading(true)
 
-        // 1.- armar la referencia
         const productsRef = collection(db, "Products")
         const q = categoryId ? query (productsRef,where("category","==", categoryId)): productsRef
 
-        //2.- llamar (async) aesa referencia
         getDocs(q)
             .then(resp=> {
                 const items = resp.docs.map((doc)=> ({id: doc.id, ...doc.data()}))
