@@ -3,6 +3,7 @@ import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
 import {doc, getDoc} from "firebase/firestore"
 import {db} from "../../firebase/config"
+import Loading from '../Loading';
 
 
 
@@ -31,7 +32,7 @@ function ItemDetailContainer(){
         <> 
             {
                 loading 
-                    ?   <h2 className='text-center my-5'>Cargando...</h2> 
+                    ?   <Loading/> 
                     :   <div className='itemDetailContainer text-center pb-4'>
                             <h2 className='m-5'>Detalles del producto</h2>
                             <ItemDetail

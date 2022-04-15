@@ -51,7 +51,6 @@ function CheckOut (){
             .then((doc) => {
                 setOrderId(doc.id)
                 emptyCart();
-                
             })
     }
 
