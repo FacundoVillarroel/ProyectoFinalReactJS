@@ -787,6 +787,98 @@ td {
   color: #fa4659;
   margin-bottom: 0; }
 
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+/* Text */
+.loading-text {
+  margin: 2rem;
+  font-size: 2rem; }
+  .loading-text span {
+    display: inline-block;
+    margin: 0 5px;
+    color: #fff; }
+    .loading-text span:nth-child(1) {
+      filter: blur(0px);
+      animation: blur-text 1s 0s infinite linear alternate; }
+    .loading-text span:nth-child(2) {
+      filter: blur(0px);
+      animation: blur-text 1s 0.2s infinite linear alternate; }
+    .loading-text span:nth-child(3) {
+      filter: blur(0px);
+      animation: blur-text 1s 0.4s infinite linear alternate; }
+    .loading-text span:nth-child(4) {
+      filter: blur(0px);
+      animation: blur-text 1s 0.6s infinite linear alternate; }
+    .loading-text span:nth-child(5) {
+      filter: blur(0px);
+      animation: blur-text 1s 0.8s infinite linear alternate; }
+    .loading-text span:nth-child(6) {
+      filter: blur(0px);
+      animation: blur-text 1s 1s infinite linear alternate; }
+    .loading-text span:nth-child(7) {
+      filter: blur(0px);
+      animation: blur-text 1s 1.2s infinite linear alternate; }
+    .loading-text span:nth-child(8) {
+      filter: blur(0px);
+      animation: blur-text 1s 1.4s infinite linear alternate; }
+
+@keyframes blur-text {
+  0% {
+    filter: blur(0px); }
+  100% {
+    filter: blur(4px); } }
+
+/* Triangles */
+.loading-wrap {
+  width: 60px;
+  height: 60px;
+  margin-top: 2rem;
+  background: #2eb872;
+  border-radius: 30px;
+  animation: rotation ease-in-out 2s infinite; }
+
+.triangle1,
+.triangle2,
+.triangle3 {
+  border-width: 0 20px 30px 20px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #fa4659;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  animation: fadecolor 2s 1s infinite; }
+
+.triangle2,
+.triangle3 {
+  content: '';
+  top: 20px;
+  left: 30px;
+  animation-delay: 1.1s; }
+
+.triangle3 {
+  left: -10px;
+  animation-delay: 1.2s; }
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg); }
+  20% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes fadecolor {
+  0% {
+    border-bottom-color: #2eb872; }
+  100% {
+    border-bottom-color: #fa4659; } }
+
 @keyframes zoom {
   0% {
     transform: scale(1); }

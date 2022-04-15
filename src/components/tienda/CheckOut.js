@@ -37,13 +37,28 @@ function CheckOut (){
 
             getDoc(docRef)
                 .then((doc)=>{
-                    if(doc.data().stockTotal >= product.quantity){
-                        updateDoc(docRef, {
-                            stockTotal: doc.data().stockTotal - product.quantity
-                        })
+                    console.log(doc.data().talles);
+                    if (product.category === "pelota"){
+                        if(doc.data().stockTotal >= product.quantity){
+                            updateDoc(docRef, {
+                                stockTotal: doc.data().stockTotal - product.quantity
+                            })
+                        }
+                        else{
+                            alert("no hay stock")
+                        }
                     }
                     else{
-                        alert("no hay stock")
+                        let sizesDoc = doc.data().talles
+                        let indexSize = doc.data().talles.findIndex(prop => prop.sizeName === product.size);
+                        console.log("sizeDoc",sizesDoc);
+                        if (doc.data().talles[indexSize].stock >= product.quantity){
+                            sizesDoc[indexSize].stock = sizesDoc[indexSize].stock - product.quantity
+                            updateDoc(docRef,{
+                                talles: sizesDoc
+                            })
+                        }
+                        else{alert("no hay stock suficiente")}
                     }
                 })
         });
@@ -51,7 +66,7 @@ function CheckOut (){
             .then((doc) => {
                 setOrderId(doc.id)
                 emptyCart();
-            })
+            }) 
     }
 
     if (orderId){

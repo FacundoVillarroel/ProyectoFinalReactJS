@@ -26,9 +26,7 @@ const ItemDetail = ({id,title,imgSrc,description,price,stockTotal,category,talle
 
     if(typeof(talles) === "undefined"){}
     else{
-        newStock = talles.find((talle) =>{
-            return talle.sizeName === size 
-        })
+        newStock = talles.find((talle) => talle.sizeName === size)
     }
 
     if (category === "pelota"){
@@ -42,7 +40,8 @@ const ItemDetail = ({id,title,imgSrc,description,price,stockTotal,category,talle
             price,
             imgSrc,
             quantity,
-            size
+            size,
+            category
         } 
         if (size==="" && category !== "pelota") {}
             else{
