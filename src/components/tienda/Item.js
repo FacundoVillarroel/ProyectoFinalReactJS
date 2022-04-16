@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom"
 
 function Item ({item}){
-    return item?(
+    let stockTotal = 0
+    if (item.category === "pelota"){
+        stockTotal = item.stockTotal
+    }
+    else{
+        item.talles.forEach(element => {
+            stockTotal = stockTotal + element.stock 
+        });
+    }
+    
+    return(
         <div className= "product d-flex flex-column align-items-center">
             <div className ="productName pt-1 pb-1">
                 <p>{item.title}</p>
@@ -14,9 +24,9 @@ function Item ({item}){
             </div>
             <Link to={`/item/${item.id}`}><button className="viewDetails">Ver detalles</button></Link>
             <div className="stock mb-0">
-                <p className="mb-0">Stock disponible: {item.stockTotal}</p>
+                <p className="mb-0">Stock disponible: {stockTotal}</p>
             </div>
         </div>
-    ): null
+    )
 }
 export default Item;

@@ -63,6 +63,12 @@
         }
     }
 }
+.messageSent{
+    margin: 2rem;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    background-color: $redColor;
+}
 
 .carousel-control-prev-icon{
     background-color: rgba($blackColor, 0.5);

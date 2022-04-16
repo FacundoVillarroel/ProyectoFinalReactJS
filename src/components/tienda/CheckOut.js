@@ -1,8 +1,9 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import {db} from "../../firebase/config"
-import {collection, addDoc, Timestamp,doc, updateDoc, getDoc} from "firebase/firestore"
+import {query, where, documentId, writeBatch, collection, Timestamp, getDocs, addDoc} from "firebase/firestore"
 import { Link, Navigate } from "react-router-dom"
+import CheckOutSuccess from "./CheckOutSuccess"
 
 function CheckOut (){
 
@@ -22,7 +23,7 @@ function CheckOut (){
         })
     }
 
-    function handleSubmit (e) {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         const order = {
             products:cart,
@@ -31,52 +32,57 @@ function CheckOut (){
             date: Timestamp.fromDate(new Date())
         }
 
+        const batch = writeBatch(db)
         const orderRef = collection(db, "orders")
-        cart.forEach(product => {
-            const docRef = doc(db,"Products",product.id)
+        const productRef = collection (db,"Products")
+        
+        const q = query(productRef,where(documentId(), "in" ,cart.map((item)=> item.id))) 
+        
+        const products = await getDocs(q)
 
-            getDoc(docRef)
-                .then((doc)=>{
-                    console.log(doc.data().talles);
-                    if (product.category === "pelota"){
-                        if(doc.data().stockTotal >= product.quantity){
-                            updateDoc(docRef, {
-                                stockTotal: doc.data().stockTotal - product.quantity
-                            })
-                        }
-                        else{
-                            alert("no hay stock")
-                        }
+        const outOfStock = []
+
+        cart.forEach((product) => {
+            
+            const itemInCart = products.docs.find((item) => item.id === product.id)
+
+            if(itemInCart.data().category === "pelota"){
+                if(itemInCart.data().stockTotal >= product.quantity){
+                    batch.update(itemInCart.ref,{
+                        stockTotal: itemInCart.data().stockTotal - product.quantity
+                    })
+                } else {
+                    outOfStock.push(product)
+                }          
+            } else {
+                    let talles = itemInCart.data().talles
+                    let indexSize = talles.findIndex(prop => prop.sizeName === product.size);
+                    
+                    if (talles[indexSize].stock >= product.quantity){
+                        talles[indexSize].stock = talles[indexSize].stock - product.quantity
+                        batch.update(itemInCart.ref,{
+                            talles: talles
+                        })
+                    } else {
+                        outOfStock.push(product)
                     }
-                    else{
-                        let sizesDoc = doc.data().talles
-                        let indexSize = doc.data().talles.findIndex(prop => prop.sizeName === product.size);
-                        console.log("sizeDoc",sizesDoc);
-                        if (doc.data().talles[indexSize].stock >= product.quantity){
-                            sizesDoc[indexSize].stock = sizesDoc[indexSize].stock - product.quantity
-                            updateDoc(docRef,{
-                                talles: sizesDoc
-                            })
-                        }
-                        else{alert("no hay stock suficiente")}
-                    }
-                })
-        });
-        addDoc(orderRef,order)
+            }
+        })
+        if (outOfStock.length === 0){ 
+            batch.commit()
+            addDoc(orderRef,order)
             .then((doc) => {
                 setOrderId(doc.id)
                 emptyCart();
-            }) 
+            })
+        } else {
+            outOfStock.forEach(item => alert("el producto: ",`'${item.title}'`, " no tiene stock suficiente"))
+        }
     }
 
     if (orderId){
         return(
-            <div className="container my-5 text-center">
-                <h2 className="my-5"> Tu compra se realizó correctamente</h2>
-                <hr/>
-                <h3 className="my-3"> Guarda tu número de orden: {orderId}</h3>
-                <Link to="/tienda"><button className="buttonReturn">Volver a la tienda</button></Link>
-            </div>
+            <CheckOutSuccess orderId = {orderId}/>
         )
     }
 
@@ -86,11 +92,10 @@ function CheckOut (){
 
 
     return(
-        <div className="container">
+        <div className="container d-flex flex-column align-items-center">
             <h2 className=" text-center my-5"> CheckOut </h2>
-            <hr/>
 
-            <form onSubmit={handleSubmit}>  
+            <form onSubmit={handleSubmit} className="checkoutForm">  
                 
                 <input
                     className="form-control my-2"
@@ -104,7 +109,7 @@ function CheckOut (){
 
                 <input
                     className="form-control my-2"
-                    type={"mail"}
+                    type={"email"}
                     placeholder={"Ingresa tu email"}
                     value={values.email}
                     name="email"
@@ -121,8 +126,10 @@ function CheckOut (){
                     onChange={handleInputChange}
                     required
                 /> 
-
-                <button className="btn btn-success" type="submit">Enviar</button>
+                <div className="d-flex align-items-center">
+                    <Link to="/cart"><button className="buttonReturn">Volver al carrito</button></Link>
+                    <button className="buttonPay" type="submit">Realizar compra</button>
+                </div>
 
             </form>
         </div>
