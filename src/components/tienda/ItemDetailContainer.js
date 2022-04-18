@@ -18,12 +18,12 @@ function ItemDetailContainer(){
         
         const docRef = doc(db, "Products",itemId)
         getDoc(docRef)
-        .then(doc => {
-            setItem ({id: doc.id, ...doc.data()})
-        })
-        .finally(()=>{
-            setLoading(false)
-        })
+            .then(doc => {
+                setItem ({id: doc.id, ...doc.data()})
+            })
+            .finally(()=>{
+                setLoading(false)
+            })
 
     },[itemId])
 

@@ -14,6 +14,7 @@ import GolesContainer from './components/goles/GolesContainer';
 import NosotrosContainer from './components/nosotros/NosotrosContainer';
 import CheckOut from './components/tienda/CheckOut';
 import './App.css';
+import OrderContainer from './components/tienda/OrderContainer';
 
 
 
@@ -37,7 +38,8 @@ function App() {
             <Route path="/category/:categoryId" element={<ItemListContainer/>} />
             <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
             <Route path="/checkout" element={<CheckOut/>} />
-            <Route path='/cart' element= {<Cart/>} />
+            <Route path="/cart" element= {<Cart/>} />
+            <Route path="/order/:orderId" element={<OrderContainer/>}/>
             <Route path="*" element={ <Navigate to="/tienda"/>}/> 
           </Routes>
           

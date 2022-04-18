@@ -3,7 +3,6 @@ import { CartContext } from "../../context/CartContext"
 import {db} from "../../firebase/config"
 import {query, where, documentId, writeBatch, collection, Timestamp, getDocs, addDoc} from "firebase/firestore"
 import { Link, Navigate } from "react-router-dom"
-import CheckOutSuccess from "./CheckOutSuccess"
 
 function CheckOut (){
 
@@ -82,7 +81,7 @@ function CheckOut (){
 
     if (orderId){
         return(
-            <CheckOutSuccess orderId = {orderId}/>
+            <Navigate to = {`/order/${orderId}`}/>
         )
     }
 
