@@ -38,7 +38,7 @@ function OrderContainer (){
                     <div className="container ">
                         <OrderTracking order={order}/>
                         <h2 className="my-5">A continuación los detalles de tu pedido:</h2>
-                        <h3 className="col-12 my-5">Order número: {order.id}</h3>
+                        <h3 className="col-12 my-5 fs-5">Order número: <span className="trackingId">{order.id}</span></h3>
                         <div className="container text-center"> 
                             <div className="row pb-3 productInCart">
                                 <h3 className="col-5 text-start"> Nombre del producto</h3>

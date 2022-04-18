@@ -931,8 +931,11 @@ form {
 .checkoutForm {
   width: 50%; }
 
-.courierImg {
-  max-width: 100%; }
+.courierContainer {
+  display: flex;
+  justify-content: center; }
+  .courierContainer .courierImg {
+    max-width: 80%; }
 
 .trackingContainer {
   font-size: 1.3rem;
@@ -941,22 +944,32 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .trackingContainer .trackingItem {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem; }
+    .trackingContainer .trackingItem .trackingSpan {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1rem;
+      border-radius: 50%;
+      border: 0.1rem grey solid; }
+      .trackingContainer .trackingItem .trackingSpan .path {
+        fill: white; }
+    .trackingContainer .trackingItem .isChecked {
+      display: flex;
+      border-color: #2eb872;
+      background-color: #2eb872; }
+      .trackingContainer .trackingItem .isChecked .checkedIcon {
+        max-width: 100%; }
 
 .trackingId {
   color: #2eb872; }
-
-.trackingItem {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  font-size: 1rem; }
-
-.trackingSpan {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-  border: 0.1rem #2eb872 solid; }
 
 @keyframes zoom {
   0% {

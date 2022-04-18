@@ -4,8 +4,8 @@ function OrderTracking ({order}){
     const date = order.date.toDate()
     return(
         <div className="container my-5 ms-5 d-flex row">
-            <div className="courierImg col-6">
-                <img alt="Courier image" src={courierimg}></img>
+            <div className="courierContainer col-6">
+                <img alt="Courier" src={courierimg} className="courierImg"></img>
             </div>
             <div className="trackingContainer col-6">
                 <div>
@@ -14,7 +14,7 @@ function OrderTracking ({order}){
                 </div>
                 <div>
                     <div className="trackingItem">
-                        <span className="trackingSpan"></span>
+                        <span className="trackingSpan isChecked"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path className="path" d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg></span>
                         <p>Confirmado el {date.toUTCString()}</p>
                     </div>
                     <div className="trackingItem">
