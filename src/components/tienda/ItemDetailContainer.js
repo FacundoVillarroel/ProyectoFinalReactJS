@@ -36,6 +36,7 @@ function ItemDetailContainer(){
                     :   <div className='itemDetailContainer text-center pb-4'>
                             <h2 className='m-5'>Detalles del producto</h2>
                             <ItemDetail
+                            item = {item}
                             id = {item.id}
                             title = {item.title}
                             imgSrc = {item.imgSrc}
@@ -43,7 +44,6 @@ function ItemDetailContainer(){
                             price = {item.price}
                             stockTotal = {item.stockTotal}
                             category = {item.category}
-                            talles = {item.talles}
                             />
                         </div>
             }

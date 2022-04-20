@@ -101,3 +101,20 @@
     color: $redColor;
     margin-bottom: 0;
 }
+
+.outOfStock{
+    height: fit-content;
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: $redColor;
+    margin-top:3rem;
+    .title{
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    .items{
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}

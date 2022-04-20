@@ -6,9 +6,7 @@ function Item ({item}){
         stockTotal = item.stockTotal
     }
     else{
-        item.talles.forEach(element => {
-            stockTotal = stockTotal + element.stock 
-        });
+        stockTotal = item.stockXL + item.stockL + item.stockM + item.stockS + item.stockXS
     }
     
     return(

@@ -6,6 +6,7 @@ import ItemInCart from "./ItemInCart"
 function Cart () {
     const {cart,emptyCart,removeItem,totalPrice} = useContext(CartContext)
 
+    console.log(cart);
     return(
         
         <>

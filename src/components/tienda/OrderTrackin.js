@@ -1,4 +1,4 @@
-import courierimg from "../../images/Courier.svg"
+import courierimg from "../../images/Courier.svg"  
 
 function OrderTracking ({order}){
     const date = order.date.toDate()

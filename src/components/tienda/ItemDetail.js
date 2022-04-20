@@ -13,24 +13,20 @@ const sizeOptions = [
     {value: 'XS', text: 'XS'},
 ]
 
-const ItemDetail = ({id,title,imgSrc,description,price,stockTotal,category,talles}) => {
+const ItemDetail = ({item,id,title,imgSrc,description,price,stockTotal,category}) => {
     const {addItemToCart,isInCart} = useContext(CartContext)
     const [quantity,setQuantity] = useState(1);
     const [size,setSize] = useState("")
-    var newStock = {}
-
+    let newStock = {}
     const navigate = useNavigate()
     const handleNavigate = () => {
         navigate(-1)
     }
 
-    if(typeof(talles) === "undefined"){}
-    else{
-        newStock = talles.find((talle) => talle.sizeName === size)
-    }
-
     if (category === "pelota"){
         newStock.stock = stockTotal
+    } else {
+        newStock.stock = item[`stock${size}`]
     }
     
     function addToCart (){
