@@ -807,6 +807,25 @@ td {
     font-size: 1rem;
     font-weight: normal; }
 
+.followOrderContainer {
+  width: 100%;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  margin-top: 4rem; }
+  .followOrderContainer .followOrder {
+    width: 50%;
+    text-align: center; }
+    .followOrderContainer .followOrder .inputOrderNumber {
+      height: 2.3rem;
+      width: 12rem;
+      padding: 0.2rem;
+      margin-right: 2rem;
+      margin-left: 3.5rem;
+      border-radius: 0.5rem;
+      border-color: #212121; }
+
 .loadingContainer {
   display: flex;
   flex-direction: column;

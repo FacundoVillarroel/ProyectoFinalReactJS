@@ -5,8 +5,6 @@ import ItemInCart from "./ItemInCart"
 
 function Cart () {
     const {cart,emptyCart,removeItem,totalPrice} = useContext(CartContext)
-
-    console.log(cart);
     return(
         
         <>
@@ -31,8 +29,8 @@ function Cart () {
                             <h3 className="col-2"> Cantidad </h3>
                             <h3 className="col-1"> Talle</h3>
                         </div>
-                        { cart.map((item) => (
-                            <ItemInCart item={item} removeItem={removeItem}/>
+                        { cart.map((item,key) => (
+                            <ItemInCart key={key} item={item} removeItem={removeItem}/>
                         ))}
                         <h3>Total: ${totalPrice()}</h3>
                     </div>

@@ -5,19 +5,21 @@ export const CartContext = createContext ()
 
 export const CartProvider = ({children}) => {
 
-    const getStorage =() => {
+    /* const getStorage =() => {
         let cartInLocal = JSON.parse(localStorage.getItem("cart"));
         if (cartInLocal != null) {
             return cartInLocal; 
+        } else {
+            return []
         }
-    }
+    } */
 
-    const [cart, setCart] = useState(getStorage())
+    const [cart, setCart] = useState([]/* getStorage() */)
 
-    const updateStorage = (cart) => {
+    /* const updateStorage = (cart) => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }
-    updateStorage(cart)
+    updateStorage(cart) */
 
     const addItemToCart = (newItem) => {
         setCart( [...cart, newItem] )
@@ -52,8 +54,6 @@ export const CartProvider = ({children}) => {
             cartQuantity,
             removeItem,
             totalPrice,
-            updateStorage,
-            getStorage
         }}> 
         {children}
         </CartContext.Provider>

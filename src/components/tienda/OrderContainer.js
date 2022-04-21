@@ -6,6 +6,7 @@ import Loading from "../Loading"
 import { Link } from "react-router-dom"
 import Order from "./Order"
 import OrderTracking from "./OrderTrackin"
+import OrderNotFound from "./OrderNotFound"
 
 function OrderContainer (){
     const [loading, setLoading] = useState(true)
@@ -19,11 +20,18 @@ function OrderContainer (){
         getDoc(docRef)
             .then((doc) => {
                 setOrder({id: doc.id, ...doc.data()})
+                return doc.data()
             })
             .finally(()=>{
                 setLoading(false)
             })
     },[orderId])
+
+    if(order !== "" && typeof(order.buyer) === "undefined"){
+        return (
+            <OrderNotFound/>
+        )
+    };
 
     return (
         
@@ -46,9 +54,9 @@ function OrderContainer (){
                                 <h3 className="col-2"> Cantidad </h3>
                                 <h3 className="col-1"> Talle</h3>
                             </div>
-                                {order.products.map((item)=>{
+                                {order.products.map((item,key)=>{
                                         return (
-                                            <Order item={item}/>
+                                            <Order item={item} key={key}/>
                                         )
                                     })} 
                             <h3>El total de tu orden: {order.total}</h3>   

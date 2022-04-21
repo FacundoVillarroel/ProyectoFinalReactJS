@@ -69,12 +69,12 @@ function CheckOut (){
             }
         })
         if (outOfStock.length === 0){ 
-            /*batch.commit()
+            batch.commit()
             addDoc(orderRef,order)
             .then((doc) => {
                 setOrderId(doc.id)
                 emptyCart();
-            })   */
+            })   
         } else {
             setIsOutOfStock(true)
         }

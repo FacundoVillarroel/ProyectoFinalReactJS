@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import {collection, getDocs, query, where} from "firebase/firestore"
 import {db} from "../../firebase/config"
 import Loading from "../Loading.js";
+import FollowYourOrder from "./FollowYourOrder.js";
 
 
 function ItemListContainer(){
@@ -36,6 +37,7 @@ function ItemListContainer(){
                     :   <div className="main container pb-3">
                             <h2 className= "text-center m-5">Bienvenido/a a la tienda de Recreativo</h2>
                             <ItemList products={productsList}/>
+                            <FollowYourOrder/>
                         </div>
             } 
         </>
