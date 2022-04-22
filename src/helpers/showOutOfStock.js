@@ -1,11 +1,10 @@
 function showOutOfStock(outOfStock){
-    if(outOfStock.length <=1) {
+    if(outOfStock.length ===1) {
         if(outOfStock[0].category === "pelota"){
-            return<p className="my-3 title">Lo sentimos, no tenemos stock del producto {outOfStock[0].title}</p>
+            return <p className="my-3 title">Lo sentimos, no tenemos stock del producto: {outOfStock[0].title}</p>
         } else {
-            <p className="my-3 title">{`Lo sentimos, no tenemos stock del producto ${outOfStock[0].title} talle "${outOfStock[0].size}"`}</p>
+            return <p className="my-3 title">{`Lo sentimos, no tenemos stock del producto: ${outOfStock[0].title} talle "${outOfStock[0].size}"`}</p>
         }
-
     } else { 
         return(
             <div>

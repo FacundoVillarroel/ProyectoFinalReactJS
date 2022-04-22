@@ -12,14 +12,14 @@ export const CartProvider = ({children}) => {
         } else {
             return []
         }
-    } */
+    }  */
 
-    const [cart, setCart] = useState([]/* getStorage() */)
+    const [cart, setCart] = useState( []/* getStorage() */ )
 
     /* const updateStorage = (cart) => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }
-    updateStorage(cart) */
+    updateStorage(cart)  */
 
     const addItemToCart = (newItem) => {
         setCart( [...cart, newItem] )

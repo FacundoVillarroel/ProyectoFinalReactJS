@@ -4,6 +4,8 @@ import {db} from "../../firebase/config"
 import {query, where, documentId, writeBatch, collection, Timestamp, getDocs, addDoc} from "firebase/firestore"
 import { Link, Navigate } from "react-router-dom"
 import showOutOfStock from "../../helpers/showOutOfStock"
+import validateEmail from "../../helpers/validateEmail"
+import notEmpyFields from "../../helpers/notEmptyFields"
 
 const outOfStock = []
 function CheckOut (){
@@ -14,7 +16,8 @@ function CheckOut (){
     const [values,setValues] = useState({
         name: "",
         email:"",
-        phone:""
+        phone:"",
+        address:""
     })
 
     function handleInputChange(e){
@@ -22,10 +25,16 @@ function CheckOut (){
             ...values,
             [e.target.name]:e.target.value
         })
+        
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+
+        if(validateEmail(values.email) || notEmpyFields(values)){
+            return alert("Debés completar todos los campos correctamente")
+        } 
+
         const order = {
             products:cart,
             total: totalPrice(),
@@ -41,13 +50,9 @@ function CheckOut (){
         
         const products = await getDocs(q)
 
-        
-
         cart.forEach((product) => {
             
             const itemInCart = products.docs.find((item) => item.id === product.id)
-            
-            
 
             if(itemInCart.data().category === "pelota"){
                 if(itemInCart.data().stockTotal >= product.quantity){
@@ -74,7 +79,7 @@ function CheckOut (){
             .then((doc) => {
                 setOrderId(doc.id)
                 emptyCart();
-            })   
+            })    
         } else {
             setIsOutOfStock(true)
         }
@@ -89,8 +94,8 @@ function CheckOut (){
     if (cart.length === 0){
         return <Navigate to="/tienda"/>
     }
-
-
+    
+    
     return(
         <>  
             {isOutOfStock
@@ -100,7 +105,7 @@ function CheckOut (){
             </div>
             :        
             <div className="container d-flex flex-column align-items-center">
-                <h2 className=" text-center my-5"> CheckOut </h2>
+                <h2 className=" text-center my-5"> Ingresa tus datos para la compra </h2>
 
                 <form onSubmit={handleSubmit} className="checkoutForm">  
                     
@@ -123,6 +128,7 @@ function CheckOut (){
                         onChange={handleInputChange}
                         required
                     />
+                    {(validateEmail(values.email))&&<p className="m-0 ps-1">Debes inglesar un email valido</p>}
 
                     <input
                         className="form-control my-2"
@@ -133,6 +139,16 @@ function CheckOut (){
                         onChange={handleInputChange}
                         required
                     /> 
+                    <input
+                        className="form-control my-2"
+                        type={"text"}
+                        value={values.address}
+                        placeholder="Ingresa la dirección de entrega"
+                        name="address"
+                        onChange={handleInputChange}
+                        required 
+                    /> 
+                    {(notEmpyFields(values))&&<p className="ps-1">Debés llenar todos los campos</p>}
                     <div className="d-flex align-items-center">
                         <Link to="/cart"><button className="buttonReturn">Volver al carrito</button></Link>
                         <button className="buttonPay" type="submit">Realizar compra</button>

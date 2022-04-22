@@ -23,7 +23,7 @@ function OrderTracking ({order}){
                     </div>
                     <div className="trackingItem">
                         <span className="trackingSpan"></span>
-                        <p>Entregado</p>
+                        <p>{`Entregado a la dirección: ${order.buyer.address}`}</p>
                     </div>
                 </div>
             </div>
