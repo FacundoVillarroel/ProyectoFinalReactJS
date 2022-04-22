@@ -1,4 +1,4 @@
-function Order ({item}){
+const Order = ({item}) => {
     return(
         <div className="row productInCart fs-5 pb-2">
             <p className="col-5 text-start">{item.title}</p>

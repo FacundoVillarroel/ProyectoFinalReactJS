@@ -2,7 +2,7 @@ import { db } from "../../firebase/config"
 import { collection,addDoc } from "firebase/firestore"
 import { useState } from "react"
 
-function Form () {
+const Form = () => {
 
     const [messageSent,setMessageSent] = useState(null)
     const [values,setValues]= useState({
@@ -13,14 +13,14 @@ function Form () {
         newsLetter:false
     })
     
-    function handleCheckbox(e) {
+    const handleCheckbox = (e) => {
         setValues({
             ...values,
             newsLetter:e.target.checked
         })
     }
 
-    function handleInputChange(e){
+    const handleInputChange = (e) => {
         setValues({
             ...values,
             [e.target.name]:e.target.value
@@ -28,7 +28,7 @@ function Form () {
     }
 
     const contactUsRef = collection(db, "contactUs")
-    function handleSubmit(e){
+    const handleSubmit = (e) => {
         e.preventDefault()
         const message={
             name:values.name,

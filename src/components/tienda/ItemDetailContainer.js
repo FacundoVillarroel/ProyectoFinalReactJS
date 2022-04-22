@@ -7,7 +7,7 @@ import Loading from '../Loading';
 
 
 
-function ItemDetailContainer(){
+const ItemDetailContainer = () => {
     const [item,setItem] = useState("")
     const [loading, setLoading] = useState(false)
 

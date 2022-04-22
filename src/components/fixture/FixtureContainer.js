@@ -1,7 +1,7 @@
 import dates from "../../data/fixtureDates"
 import FixtureDate from "./FixtureDate";
 
-function FixtureContainer () {
+const FixtureContainer = () => {
 
     return (
         <main className="fixture">

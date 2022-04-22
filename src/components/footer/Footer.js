@@ -1,5 +1,5 @@
 import { BsFacebook,BsInstagram } from "react-icons/bs"
-function Footer () {
+const Footer = () => {
 
     return(
         <footer className="footerContainer">

@@ -1,11 +1,11 @@
 import {BsFillCartPlusFill} from "react-icons/bs"
 
-function ItemCount ({stock,setQuantity,quantity,addToCart,category,size}){
+const ItemCount = ({stock,setQuantity,quantity,addToCart,category,size}) => {
     
-    function handleClickPlus(){
+    const handleClickPlus = () => {
         quantity < stock && setQuantity(quantity + 1)
     }
-    function handleClickMinus(){
+    const handleClickMinus = () => {
         quantity > 0 && setQuantity(quantity - 1)
     }
 

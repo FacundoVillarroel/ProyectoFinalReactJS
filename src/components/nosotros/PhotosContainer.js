@@ -11,7 +11,7 @@ import foto10 from "../../images/fotos10.jpg"
 import foto11 from "../../images/fotos11.jpg"
 import foto12 from "../../images/fotos12.jpg"
 
-function PhotosContainer() {
+const PhotosContainer = () => {
 
     return (
 

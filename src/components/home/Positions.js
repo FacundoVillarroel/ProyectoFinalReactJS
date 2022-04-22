@@ -1,4 +1,4 @@
-function Positions (){
+const Positions = () => {
     return(
         <article className="posiciones col-4 my-5 d-flex flex-column align-items-center" >          
                     <h2 className="titular">Posiciones</h2>

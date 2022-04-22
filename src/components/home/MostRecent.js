@@ -1,5 +1,5 @@
 
-function MostRecent () {
+const MostRecent = () => {
     return(
         <>
             <div className="col-6 text-center my-3">

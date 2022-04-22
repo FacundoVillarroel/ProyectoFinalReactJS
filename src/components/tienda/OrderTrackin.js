@@ -1,6 +1,6 @@
 import courierimg from "../../images/Courier.svg"  
 
-function OrderTracking ({order}){
+const OrderTracking = ({order}) => {
     const date = order.date.toDate()
     return(
         <div className="container my-5 ms-5 d-flex row">

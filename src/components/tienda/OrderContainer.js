@@ -8,7 +8,7 @@ import Order from "./Order"
 import OrderTracking from "./OrderTrackin"
 import OrderNotFound from "./OrderNotFound"
 
-function OrderContainer (){
+const OrderContainer = () => {
     const [loading, setLoading] = useState(true)
     const [order,setOrder] = useState("")
     const {orderId} = useParams()

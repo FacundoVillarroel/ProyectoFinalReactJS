@@ -1,4 +1,4 @@
-function Hattricks() {
+const Hattricks = () => {
     return(
         <article className="hattricks">
             <h3 className="titular">Hattricks</h3>

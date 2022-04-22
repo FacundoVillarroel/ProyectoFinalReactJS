@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
 import ItemInCart from "./ItemInCart"
 
-function Cart () {
+const Cart = () => {
     const {cart,emptyCart,removeItem,totalPrice} = useContext(CartContext)
     return(
         

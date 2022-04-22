@@ -8,7 +8,7 @@ import validateEmail from "../../helpers/validateEmail"
 import notEmpyFields from "../../helpers/notEmptyFields"
 
 const outOfStock = []
-function CheckOut (){
+const CheckOut = () => {
     const {cart,totalPrice,emptyCart} = useContext(CartContext)
 
     const [isOutOfStock,setIsOutOfStock] = useState(false)
@@ -20,7 +20,7 @@ function CheckOut (){
         address:""
     })
 
-    function handleInputChange(e){
+    const handleInputChange = (e) => {
         setValues({
             ...values,
             [e.target.name]:e.target.value

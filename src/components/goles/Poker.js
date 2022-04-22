@@ -1,4 +1,4 @@
-function Poker () {
+const Poker = () => {
     return(
         <article className="poker">
             <h3 className="titular">Poker</h3>

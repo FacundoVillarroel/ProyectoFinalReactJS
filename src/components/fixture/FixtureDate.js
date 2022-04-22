@@ -1,5 +1,5 @@
 
-function FixtureDate({dates}){
+const FixtureDate = ({dates}) =>{
 
     return(
         <>

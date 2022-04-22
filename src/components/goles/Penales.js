@@ -1,4 +1,4 @@
-function Penales () {
+const Penales = () => {
     return (
         <article className="penales">
             <h3 className="titular">Penales</h3>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import {BsFillTrashFill} from "react-icons/bs"
 
-function ItemInCart({item,removeItem}){
+const ItemInCart = ({item,removeItem}) => {
 
     return(
         <div key={item.id+item.size}className="row productInCart justify-content-start">

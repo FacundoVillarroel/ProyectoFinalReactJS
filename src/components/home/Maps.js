@@ -1,4 +1,4 @@
-function Maps(){
+const Maps = () => {
     return(
         <article className="col-4 text-center">
             <h3 >Torneo Campa fútbol</h3>

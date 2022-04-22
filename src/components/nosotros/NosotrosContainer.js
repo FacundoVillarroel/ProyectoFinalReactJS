@@ -3,7 +3,7 @@ import Information from "./Information"
 import PhotosContainer from "./PhotosContainer"
 import Form from "./Form"
 
-function NosotrosContainer(){
+const NosotrosContainer = () => {
     return(
         <main className="gridPadreNosotros">
         

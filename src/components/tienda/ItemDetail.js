@@ -29,7 +29,7 @@ const ItemDetail = ({item,id,title,imgSrc,description,price,stockTotal,category}
         newStock.stock = item[`stock${size}`]
     }
     
-    function addToCart (){
+    const addToCart = () => {
         const itemToAdd = {
             id,
             title,

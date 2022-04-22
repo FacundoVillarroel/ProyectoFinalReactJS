@@ -1,4 +1,4 @@
-function Goleadores (){
+const Goleadores = () => {
     return(
         <article className="goleadores"> 
                 <h3 className="titular">Goleadores</h3>

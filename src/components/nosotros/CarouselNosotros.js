@@ -3,7 +3,7 @@ import familia2 from "../../images/familia2.jpg"
 import familia3 from "../../images/familia3.jpg"
 import Carousel from 'react-bootstrap/Carousel'
 
-function CarouselNosotros () {
+const CarouselNosotros = () => {
 
     return (
 

@@ -2,7 +2,7 @@ import {BsFillCartFill} from "react-icons/bs"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 
-function CartWidget () {
+const CartWidget = () => {
 
     const {cartQuantity} = useContext(CartContext)
     return(

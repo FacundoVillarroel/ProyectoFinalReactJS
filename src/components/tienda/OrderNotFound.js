@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 
-function OrderNotFound () {
+const OrderNotFound = () => {
 
     return (
         <div className="container text-center">

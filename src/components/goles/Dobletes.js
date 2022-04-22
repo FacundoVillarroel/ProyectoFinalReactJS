@@ -1,4 +1,4 @@
-function Dobletes (){
+const Dobletes = () => {
     return(
         <article className="dobletes">
             <h3 className="titular">Dobletes</h3>

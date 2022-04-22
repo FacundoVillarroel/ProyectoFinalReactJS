@@ -1,7 +1,7 @@
 import {Accordion, Container} from "react-bootstrap"
 import {BsFileFill} from "react-icons/bs"
 
-function Player ({player}){
+const Player = ({player}) => {
 
 let imgPlayer = `jugadorImagen${player.id}`
 

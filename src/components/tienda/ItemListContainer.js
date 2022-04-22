@@ -7,7 +7,7 @@ import Loading from "../Loading.js";
 import FollowYourOrder from "./FollowYourOrder.js";
 
 
-function ItemListContainer(){
+const ItemListContainer = () => {
     const [productsList,setProductList] = useState([])
     const [loading, setLoading] = useState(false)
 

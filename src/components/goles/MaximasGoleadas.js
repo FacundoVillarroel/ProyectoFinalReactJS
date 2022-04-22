@@ -1,4 +1,4 @@
-function MaximasGoleadas () {
+const MaximasGoleadas = () => {
     return (
         <article className="maximasGoleadas">
             <h3 className="titular">Maximas goleadas</h3>

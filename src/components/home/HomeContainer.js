@@ -2,7 +2,7 @@ import MostRecent from "./MostRecent"
 import Positions from "./Positions"
 import NextMatch from "./NextMatch"
 import Maps from "./Maps"
-function HomeContainer (){
+const HomeContainer = () => {
 
     return(
         <div className="container">

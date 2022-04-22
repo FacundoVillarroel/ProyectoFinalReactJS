@@ -1,4 +1,4 @@
-function Information () {
+const Information = () => {
 
     return(
         <article className="information container">

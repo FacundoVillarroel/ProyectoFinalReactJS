@@ -1,7 +1,7 @@
 import recreaGif from "../../images/gif-recrea.gif"
 import deportivoGif from "../../images/gif-deportivo.gif"
 
-function NextMatch (){
+const NextMatch = () => {
     return (
         <article className="proximoPartido col-8">
             <div><h2 className="titularSecundario">Próximo partido</h2></div>

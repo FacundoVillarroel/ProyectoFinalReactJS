@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { useState,useContext } from "react";
 import {CartContext} from "../../context/CartContext"
 
-function NavBar() {
+const NavBar = () => {
     const {cartQuantity} = useContext(CartContext)
 
     const [activePage,setActivePage] = useState({
@@ -16,7 +16,7 @@ function NavBar() {
         tienda:false
     })
 
-function handleClickLink (e){
+    const handleClickLink = (e) => {
     setActivePage({
         home:false,
         fixture:false,

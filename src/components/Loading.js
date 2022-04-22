@@ -1,4 +1,4 @@
-function Loading () {
+const Loading = () => {
 
     return(
         <div className="container loadingContainer" >

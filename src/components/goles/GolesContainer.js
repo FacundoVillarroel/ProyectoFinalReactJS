@@ -5,7 +5,7 @@ import Dobletes from "./Dobletes"
 import Hattricks from "./Hattricks"
 import Poker from "./Poker"
 
-function GolesContainer(){
+const GolesContainer = () => {
     return(
         <section className="gridPadreGoles">
 

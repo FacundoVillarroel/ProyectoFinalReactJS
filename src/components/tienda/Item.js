@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function Item ({item}){
+const Item = ({item}) => {
     let stockTotal = 0
     if (item.category === "pelota"){
         stockTotal = item.stockTotal

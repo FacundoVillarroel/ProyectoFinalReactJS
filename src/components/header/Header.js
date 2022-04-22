@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Header () {
+const Header = () => {
     return (
         <header className="header d-flex justify-content-center align-items-center pt-3 pb-3">
             <Link to={"/"}>

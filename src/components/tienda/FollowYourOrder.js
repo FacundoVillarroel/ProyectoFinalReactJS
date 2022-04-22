@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Navigate } from "react-router-dom"
 
-function FollowYourOrder(){
+const FollowYourOrder = () => {
 
     const [orderId,setOrderId] = useState("")
     const [path,setPath] = useState(null)
