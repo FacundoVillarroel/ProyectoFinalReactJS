@@ -7,7 +7,7 @@ export const CartProvider = ({children}) => {
 
     const getStorage =() => {
         let cartInLocal = localStorage.getItem("cart")
-        if (cartInLocal != null || typeof(cartInLocal) === "undefined") {
+        if (cartInLocal != null && typeof(cartInLocal) !== "undefined") {
             return JSON.parse(cartInLocal);
         } else {
             return []
