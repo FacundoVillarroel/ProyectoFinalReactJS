@@ -1,81 +1,30 @@
-FINAL PROJECT FOR THE REACT JS COURSE OF CODERHOUSE
+# PROYECTO FINAL PARA EL CURSO DE REACT JS DE CODERHOUSE
+_(English version below)_
 
-•Primera entrega del Proyecto Final
+Este proyecto fue creado exclusívamente para el curso de **_React JS_** de **CODERHOUSE**
 
--El proyecto se basa en un equipo de fútbol de amigos en el cual vengo trabajando desde los cursos de Desarrollo web y JavaScript
--Las dependencias extras instaladas por npm son: react-bootstrap, bootstrap y @fortawesome/react-fontawesome. para poder utilizar el menú hamburguesa en pantallas mas chicas (pretendo posteriormente realizar toda la pagina responsive) y utilizo fontawesome para incluir los iconos de las redes sociales.
+### Recreativo F.C.
 
+El proyecto está inspirado en un equipo de fútbol amateur en el que solía jugar con mis amigos, parte del desarrollo viene de los proyectos realizados para los cursos de **_Desarrollo Web y JavaScript_**. En este proyecto no se incluye la funcionalidad de ser responsive para pantallas mas pequeñas, idealmente diseñado para desktop
 
+### Deployed
 
+Puedes encontrar el proyecto en el siguiente link https://proyecto-final-react-js-two.vercel.app/
 
+¡Muchas gracias por su interés en este proyecto, animate a dejar un mensaje!
 
-# Getting Started with Create React App
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FINAL PROJECT FOR THE REACT JS COURSE OF CODERHOUSE
 
-## Available Scripts
+This proyect was created exclusively for the **_React JS_** course of **CODERHOUSE**
 
-In the project directory, you can run:
+### Recreativo F.C.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The project is inspired by an amateur football team in which I used to play with my friends, part of the development comes from the projects carried out for the **_Web Development and JavaScript_** courses. This project does not include the functionality of being responsive for smaller screens, ideally designed for desktop
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can find the project in the following link https://proyecto-final-react-js-two.vercel.app/
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you very much for your interest in this project, feel free to leave a message!
