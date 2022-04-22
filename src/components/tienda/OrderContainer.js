@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import Loading from "../Loading"
 import { Link } from "react-router-dom"
 import Order from "./Order"
-import OrderTracking from "./OrderTrackin"
+import OrderTracking from "./OrderTracking"
 import OrderNotFound from "./OrderNotFound"
 
 const OrderContainer = () => {
@@ -34,15 +34,11 @@ const OrderContainer = () => {
     };
 
     return (
-        
             loading 
-
             ? <Loading/>
-            
             :
                 <div>
                     <h2 className="my-5 text-center">Gracias por comprar en la tienda online de Recreativo F.C.</h2>
-                    
                     <div className="container ">
                         <OrderTracking order={order}/>
                         <h2 className="my-5">A continuación los detalles de tu pedido:</h2>
@@ -64,8 +60,6 @@ const OrderContainer = () => {
                         <Link to="/tienda"><button className="buttonReturn">Volver a la tienda</button></Link>
                     </div>
                 </div>
-
-        
     )
 }
 

@@ -1,23 +1,14 @@
 import { createContext } from "react"
 import { useState } from "react"
+import getStorage from "../helpers/getStorage"
+import updateStorage from "../helpers/updateStorage"
 
 export const CartContext = createContext ()
 
 export const CartProvider = ({children}) => {
-
-    const getStorage =() => {
-            let cartInLocal = localStorage.getItem("cart")
-            if (cartInLocal === "undefined" || cartInLocal === null){
-                return []
-            } else {
-                return JSON.parse(cartInLocal)}
-    }  
     
     const [cart, setCart] = useState( getStorage())
 
-    const updateStorage = (cart) => {
-        localStorage.setItem("cart", JSON.stringify(cart));
-    }
     updateStorage(cart)  
 
     const addItemToCart = (newItem) => {

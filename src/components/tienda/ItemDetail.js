@@ -15,14 +15,16 @@ const sizeOptions = [
 
 const ItemDetail = ({item,id,title,imgSrc,description,price,stockTotal,category}) => {
     const {addItemToCart,isInCart} = useContext(CartContext)
+    
     const [quantity,setQuantity] = useState(1);
     const [size,setSize] = useState("")
-    let newStock = {}
+
     const navigate = useNavigate()
     const handleNavigate = () => {
         navigate(-1)
     }
-
+    
+    let newStock = {}
     if (category === "pelota"){
         newStock.stock = stockTotal
     } else {

@@ -11,7 +11,8 @@ const Cart = () => {
         {   cart.length===0 ? 
 
                 <div className="text-center">
-                        <h2 className="my-5">Tu carrito esta vacio</h2>
+                        <h2 className="my-5">¡Tu carrito esta vacio!</h2>
+                        <p className="mb-5 fs-5">Selecciona nuevos productos de nuestra tienda</p>
                         <Link to="/tienda">
                             <button className="buttonReturn"> Ir a la tienda </button>
                         </Link>

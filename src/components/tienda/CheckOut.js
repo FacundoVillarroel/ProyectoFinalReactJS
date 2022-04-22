@@ -61,8 +61,9 @@ const CheckOut = () => {
                     })
                 } else {
                     outOfStock.push(product)
-                }          
+                }
             } else { 
+                /* se obtiene el talle específico a modificar */
                 let sizeToModify = itemInCart.data()[`stock${product.size}`]
                     if (sizeToModify >= product.quantity){
                         batch.update(itemInCart.ref, {
@@ -94,7 +95,6 @@ const CheckOut = () => {
     if (cart.length === 0){
         return <Navigate to="/tienda"/>
     }
-    
     
     return(
         <>  
