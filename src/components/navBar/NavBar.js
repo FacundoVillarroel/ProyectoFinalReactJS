@@ -1,4 +1,4 @@
-import {Navbar,Container,Nav, NavDropdown} from "react-bootstrap"
+import {Navbar,Container,Nav} from "react-bootstrap"
 import CartWidget from "../tienda/CartWidget";
 import { Link } from "react-router-dom"
 import { useState,useContext } from "react";
@@ -40,12 +40,6 @@ const NavBar = () => {
                         <Nav.Link as={Link} to ="/jugadores" onClick={handleClickLink} active={activePage.jugadores} id="jugadores">Jugadores</Nav.Link>
                         <Nav.Link as={Link} to ="/nosotros" onClick={handleClickLink} active={activePage.nosotros} id="nosotros">Sobre Nosotros</Nav.Link>
                         <Nav.Link as={Link} to ="/tienda" onClick={handleClickLink} active={activePage.tienda} id="tienda">Tienda</Nav.Link>
-                        <NavDropdown title="Categorias" >                            
-                            <NavDropdown.Item as={Link} to="/category/titular" onClick={handleClickLink}id="tienda">Conjuntos Titulares</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/category/suplente" onClick={handleClickLink}id="tienda">Conjuntos Suplentes</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/category/deVestir" onClick={handleClickLink}id="tienda">Ropa de vestir</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/category/pelota" onClick={handleClickLink}id="tienda">Pelotas</NavDropdown.Item>
-                        </NavDropdown>
                         
                         {cartQuantity() !== 0 && <Link to="/cart"> <CartWidget/> </Link>}
 

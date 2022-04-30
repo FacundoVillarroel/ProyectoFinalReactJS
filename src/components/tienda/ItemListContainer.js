@@ -5,6 +5,7 @@ import {collection, getDocs, query, where} from "firebase/firestore"
 import {db} from "../../firebase/config"
 import Loading from "../Loading.js";
 import FollowYourOrder from "./FollowYourOrder.js";
+import CategoryNav from "./CategoryNav.js";
 
 
 const ItemListContainer = () => {
@@ -35,7 +36,12 @@ const ItemListContainer = () => {
                 loading 
                     ?   <Loading/>
                     :   <div className="main container pb-3">
+                            <CategoryNav/>
                             <h2 className= "text-center m-5">Bienvenido/a a la tienda de Recreativo</h2>
+                            {categoryId === "titular" && <h3 className="text-center my-5"> Conjuntos Titulares:</h3>}
+                            {categoryId === "suplente" && <h3 className="text-center my-5"> Conjuntos Suplentes:</h3>}
+                            {categoryId === "deVestir" && <h3 className="text-center my-5"> Ropa de Vestir:</h3>}
+                            {categoryId === "pelota" && <h3 className="text-center my-5"> Pelotas:</h3>}
                             <ItemList products={productsList}/>
                             <FollowYourOrder/>
                         </div>
