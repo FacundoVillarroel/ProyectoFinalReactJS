@@ -69,7 +69,7 @@ const ItemDetail = ({item,id,title,imgSrc,description,price,stockTotal,category}
                 
                 <div>
                     {   isInCart(id,size)
-                            ?  <><p style={{color:"green"}}> Este producto ya está en tu carrito</p>
+                            ?  <><p style={{color:"green", marginBottom:"2rem", fontSize:"1rem"}}> Este producto ya está en tu carrito</p>
                                 <Link to= "/cart" className="AddToCartButton"> Ir al carrito</Link></>
                             : <ItemCount 
                             stock = {newStock.stock}

@@ -697,32 +697,22 @@ td {
   border-radius: 40%; }
 
 .categoryButton {
+  color: #ffffff;
+  border-color: #2eb872;
   margin: 1rem;
-  padding: 0.2rem 0.5rem;
   border-radius: 1rem;
   background-color: #2eb872; }
   .categoryButton:hover {
     color: #2eb872;
     border-color: #2eb872;
-    background-color: #212121;
+    background-color: #ffffff;
     transition: 300ms linear; }
   .categoryButton a {
+    padding: 0.4rem 0.6rem;
+    color: #ffffff;
     font-size: 1.3rem; }
     .categoryButton a:hover {
       color: #2eb872; }
-
-.itemCount {
-  background-color: #2eb872;
-  width: 16rem;
-  border-radius: 2rem; }
-  .itemCount .quantityButtonContainer {
-    width: 8rem;
-    border: #2eb872 solid 0.1rem; }
-    .itemCount .quantityButtonContainer .quantityButton {
-      border-radius: 0.3rem;
-      height: 1.3rem;
-      width: 1.3rem;
-      margin: 0.5rem 0rem; }
 
 .productList {
   justify-content: center; }
@@ -778,6 +768,20 @@ td {
     width: fit-content;
     border-radius: 2rem;
     box-shadow: 0px 0px 2px 2px rgba(250, 70, 89, 0.7); }
+    .itemDetailContainer .itemDetail .radioSize {
+      cursor: pointer;
+      margin: 1rem;
+      padding: 0.5rem 1rem;
+      border: #ffffff solid 0.1rem;
+      border-radius: 2rem; }
+      .itemDetailContainer .itemDetail .radioSize:hover {
+        color: #212121;
+        background-color: #ffffff;
+        border-color: #2eb872; }
+    .itemDetailContainer .itemDetail .radioSizeSelected {
+      color: #212121;
+      background-color: #ffffff;
+      border-color: #2eb872; }
     .itemDetailContainer .itemDetail .selectSize {
       font-size: 1rem; }
     .itemDetailContainer .itemDetail .AddToCartButton {
@@ -795,6 +799,18 @@ td {
         color: #2eb872;
         background-color: #ffffff;
         transition: 300ms linear; }
+    .itemDetailContainer .itemDetail .itemCount {
+      background-color: #2eb872;
+      width: 16rem;
+      border-radius: 2rem; }
+      .itemDetailContainer .itemDetail .itemCount .quantityButtonContainer {
+        width: 8rem;
+        border: #2eb872 solid 0.1rem; }
+        .itemDetailContainer .itemDetail .itemCount .quantityButtonContainer .quantityButton {
+          border-radius: 0.3rem;
+          height: 1.3rem;
+          width: 1.3rem;
+          margin: 0.5rem 0rem; }
 
 .productInCart {
   margin: 2rem;

@@ -36,8 +36,8 @@ const ItemListContainer = () => {
                 loading 
                     ?   <Loading/>
                     :   <div className="main container pb-3">
-                            <CategoryNav/>
                             <h2 className= "text-center m-5">Bienvenido/a a la tienda de Recreativo</h2>
+                            <CategoryNav/>
                             {categoryId === "titular" && <h3 className="text-center my-5"> Conjuntos Titulares:</h3>}
                             {categoryId === "suplente" && <h3 className="text-center my-5"> Conjuntos Suplentes:</h3>}
                             {categoryId === "deVestir" && <h3 className="text-center my-5"> Ropa de Vestir:</h3>}
