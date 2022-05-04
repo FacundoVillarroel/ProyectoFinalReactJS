@@ -7,7 +7,7 @@ import showOutOfStock from "../../helpers/showOutOfStock"
 import validateEmail from "../../helpers/validateEmail"
 import notEmpyFields from "../../helpers/notEmptyFields"
 
-const outOfStock = []
+let outOfStock = []
 const CheckOut = () => {
     const {cart,totalPrice,emptyCart} = useContext(CartContext)
 
@@ -28,20 +28,21 @@ const CheckOut = () => {
         
     }
 
+    
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-
         if(validateEmail(values.email) || notEmpyFields(values)){
             return alert("Debés completar todos los campos correctamente")
         } 
-
+        
         const order = {
             products:cart,
             total: totalPrice(),
             buyer: {...values},
             date: Timestamp.fromDate(new Date())
         }
-
+        
         const batch = writeBatch(db)
         const orderRef = collection(db, "orders")
         const productRef = collection (db,"Products")
@@ -49,7 +50,8 @@ const CheckOut = () => {
         const q = query(productRef,where(documentId(), "in" ,cart.map((item)=> item.id))) 
         
         const products = await getDocs(q)
-
+        
+        outOfStock = []
         cart.forEach((product) => {
             
             const itemInCart = products.docs.find((item) => item.id === product.id)
